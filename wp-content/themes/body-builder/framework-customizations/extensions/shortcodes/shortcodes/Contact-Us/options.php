@@ -33,7 +33,7 @@ $options = array(
         'options' => array(
                 'contact_title' => array(
                     'type' => 'text',
-                    'label' => esc_html__('Conatct Title', 'body-builder')
+                    'label' => esc_html__('Contact Title', 'body-builder')
                 ),
             	'contact_description' => array(
                     'type' => 'text',
@@ -42,7 +42,7 @@ $options = array(
                 
                 'contact_icon' => array(
                     'type' => 'icon-v2',
-                    'label' => esc_html__('Conatc Icon', 'body-builder')
+                    'label' => esc_html__('Contact Icon', 'body-builder')
                 ),          
             ),
          ),

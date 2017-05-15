@@ -62,7 +62,7 @@ $extraclass = $atts['extra_body_class'];
             </div>
             <div class="content">
               <?php if(!empty($contact_title)): ?>
-              <h4><?php echo esc_html__($contact_title ,'body-builder'); ?></h4>
+              <h4><?php echo esc_html($contact_title); ?></h4>
               <?php endif; ?>
               <?php if(!empty($contact_description)): ?>
               <p><?php echo esc_html($contact_description); ?></p>
@@ -97,8 +97,7 @@ $extraclass = $atts['extra_body_class'];
     </div><!-- container -->
   </div>
   
-  <div  class="contact-map" id="map_canvas" data-map-title="<?php echo esc_attr( $map_title ); ?>"  data-map-icon="<?php echo esc_url( $map_icon ); ?>" data-map-latitute="<?php echo esc_html( $latitude ); ?>" data-map-longitude="<?php echo esc_html( $longitude ); ?>" data-map-zoom="<?php echo esc_html( $map_Zoom ); ?>" >
-          </div>
+  <div  class="contact-map" id="map_canvas" data-map-title="<?php echo esc_attr( $map_title ); ?>"  data-map-icon="<?php echo esc_url( $map_icon ); ?>" data-map-latitute="<?php echo esc_html( $latitude ); ?>" data-map-longitude="<?php echo esc_html( $longitude ); ?>" data-map-zoom="<?php echo esc_html( $map_Zoom ); ?>" ></div>
     
   </div><!-- contact-map -->
 </div><!-- contact-details -->
