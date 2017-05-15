@@ -4,6 +4,7 @@ if (!defined('FW')) die('Forbidden');
 
 
 $section_title = $atts['section_title'];
+$post_limit = $atts['post_limit'];
 $extraclass = $atts['extra_body_class'];
 
 
@@ -22,7 +23,7 @@ $extraclass = $atts['extra_body_class'];
           $recent_post = new WP_Query(array(
               'post_type' => 'post',
               'order'     => 'decending',
-              'posts_per_page' => 3
+              'posts_per_page' => $post_limit
 
             ));
          while($recent_post->have_posts()): $recent_post->the_post()  ?>
@@ -37,7 +38,7 @@ $extraclass = $atts['extra_body_class'];
             <div class="content">
               <h3><a href="<?php esc_url(the_permalink()); ?>"><?php the_title(); ?></a></h3>
               <ul class="post-meta">
-                <li><?php the_date(); ?></li>
+                <li><?php the_time('F d y'); ?></li>
               </ul>
               <p><?php echo wp_trim_words( get_the_content(), 10, false ); ?></p>
             </div><!-- content -->

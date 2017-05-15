@@ -9,6 +9,7 @@ $trainer_twitter =$atts['trainer_twitter'];
 $trainer_linkedin =$atts['trainer_linkedin'];
 
 $see_more = $atts['see_more'];
+$post_limit = $atts['post_limit'];
 
 $extraclass = $atts['extra_body_class'];
 
@@ -27,7 +28,7 @@ $extraclass = $atts['extra_body_class'];
       <?php
         $trainer_info = new Wp_Query(array(
          'post_type'=>'body_trainer',
-         'posts_per_page' => 3 ,
+         'posts_per_page' => $post_limit
       
         )); 
          while($trainer_info->have_posts()): $trainer_info->the_post(); ?>
@@ -39,9 +40,15 @@ $extraclass = $atts['extra_body_class'];
           <div class="overlay"></div>
 
               <div class="trainer-social">
-                <a href="<?php esc_url($trainer_twitter); ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="<?php esc_url($trainer_facebook); ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="<?php esc_url($trainer_linkedin); ?>"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <?php if(!empty($trainer_twitter)) :
+                  echo '<a href="'.$trainer_twitter  = fw_get_db_post_option(get_the_ID(), 'trainer_twitter').'"><i class="fa fa-twitter" aria-hidden="true"></i></a>';
+                endif;?>
+                 <?php if(!empty($trainer_facebook)) :?>
+                <a href="<?php echo esc_url($trainer_facebook); ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <?php endif; ?>
+                <?php if(!empty($trainer_linkedin)) :?>
+                <a href="<?php echo esc_url($trainer_linkedin); ?>"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <?php endif;?>
               </div>
 
         </div><!-- trainer image -->

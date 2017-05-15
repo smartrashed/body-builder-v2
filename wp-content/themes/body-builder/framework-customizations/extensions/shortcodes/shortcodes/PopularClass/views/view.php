@@ -3,7 +3,9 @@ if (!defined('FW')) die('Forbidden');
 
 
 $section_title = $atts['section_title'];
+$post_limit = $atts['post_limit'];
 $extraclass = $atts['extra_body_class'];
+
 
 
 ?>
@@ -19,8 +21,7 @@ $extraclass = $atts['extra_body_class'];
           <div class="swiper-wrapper">
             <?php $class_info = new Wp_Query(array(
                   'post_type'=>'body_Class',
-                  'posts_per_page' => 8 ,
-                  
+                  'posts_per_page' => $post_limit
                 ));
             ?>
             <?php while($class_info->have_posts()): $class_info->the_post()  ?>
@@ -30,7 +31,7 @@ $extraclass = $atts['extra_body_class'];
               </div><!-- image -->
               <div class="content">
                 <h3><a href="<?php esc_url(the_permalink()); ?>"><?php the_title(); ?></a></h3>
-                <span><?php echo $class_start_time  = fw_get_db_post_option(get_the_ID(), 'class_start_time'); ?> - <?php echo $class_start_time  = fw_get_db_post_option(get_the_ID(), 'class_end_time'); ?></span>
+                <span><?php echo $class_time  = fw_get_db_post_option(get_the_ID(), 'class_time'); ?></span>
               </div><!-- content -->
             </div><!-- class-item swiper-slide -->
             <?php endwhile; ?>

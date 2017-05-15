@@ -9,6 +9,7 @@ $trainer_twitter  = fw_get_db_post_option(get_the_ID(), 'trainer_twitter');
 $trainer_linkedin  = fw_get_db_post_option(get_the_ID(), 'trainer_linkedin');
 
 $extraclass = $atts['extra_body_class'];
+$post_limit = $atts['post_limit'];
 
 ?>
 
@@ -23,7 +24,7 @@ $extraclass = $atts['extra_body_class'];
                      <?php  
                       $trainer_info = new Wp_Query(array(
                         'post_type'=>'body_trainer',
-                        'posts_per_page' => 8 ,
+                        'posts_per_page' => $post_limit
                         
                       ));
 

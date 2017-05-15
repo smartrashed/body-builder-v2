@@ -3,6 +3,8 @@ if (!defined('FW')) die('Forbidden');
 
 $section_title = $atts['section_title'];
 $extraclass = $atts['extra_body_class'];
+$post_limit = $atts['post_limit'];
+
 ?>
 
  <!--Testimonial-two start here -->
@@ -18,7 +20,7 @@ $extraclass = $atts['extra_body_class'];
 
              <?php  $testimonial_info = new Wp_Query(array(
                 'post_type'=>'body_testmonial',
-                'posts_per_page' => 4 ,
+                'posts_per_page' => $post_limit 
                 
               )); 
               while ($testimonial_info->have_posts()): $testimonial_info->the_post() ?>
