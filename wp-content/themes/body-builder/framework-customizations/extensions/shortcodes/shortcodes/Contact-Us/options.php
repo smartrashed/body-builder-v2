@@ -75,19 +75,27 @@ $options = array(
         'type' => 'box',
         'title' => esc_html__('Map Info', 'body-builder'),
         'options' => array(
+                'map_title' => array(
+                    'type' => 'text',
+                    'label' => esc_html__('Map title', 'body-builder')
+                ),
                 'latitude' => array(
                     'type' => 'text',
-                    'label' => esc_html__('Put Latitude', 'body-builder')
+                    'label' => esc_html__('Latitude', 'body-builder')
                 ),
                 'longitude' => array(
                     'type' => 'text',
-                    'label' => esc_html__('Put Longitude', 'body-builder')
+                    'label' => esc_html__('Longitude', 'body-builder')
                 ),
                 
                 'map_icon' => array(
                     'type' => 'icon-v2',
                     'label' => esc_html__('Map Icon', 'body-builder')
-                ),          
+                ), 
+                'map_Zoom' => array(
+                    'type' => 'text',
+                    'label' => esc_html__('Map Zoom', 'body-builder')
+                ),         
             ),
          ),
     'extra_body_class'   => array(

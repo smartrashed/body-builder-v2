@@ -2,7 +2,7 @@
 if (!defined('FW')) die('Forbidden');
 
 
-$partner_logos = $atts['partner_logos'];
+$partner_logos = $atts['logos'];
 $extraclass = $atts['extra_body_class'];
 
 ?>
@@ -14,7 +14,12 @@ $extraclass = $atts['extra_body_class'];
        <?php foreach ($partner_logos as $logo) :  ?>
         <div class="swiper-slide">
           <div class="client-item">
-            <img src="<?php echo esc_url($logo['url']); ?>" alt="client image" class="img-responsive">
+          <?php if($logo['logo_link']) : ?>
+            <a href="<?php esc_url($logo['logo_link']) ?>"><img src="<?php echo esc_url($logo['ithumb']['url']); ?>" alt="client image" class="img-responsive"></a>
+          <?php else: ?>
+            <img src="<?php echo esc_url($logo['ithumb']['url']); ?>" alt="client image" class="img-responsive">
+          <?php endif; ?>
+          
           </div><!-- client-item -->
         </div><!-- swiper-slide -->
        <?php endforeach; ?>
