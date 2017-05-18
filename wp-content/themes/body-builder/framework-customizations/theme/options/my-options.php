@@ -7,7 +7,7 @@ $options = array(
             'option_1' => array(
                 'type' => 'text',
                 'value' => 'Default Value',
-                'label' => __('Unyson Option Rashed', 'body-builder'),
+                'label' => __('Unyson Option ', 'body-builder'),
                 'desc' => __('Option Description', 'body-builder'),
             ),
 

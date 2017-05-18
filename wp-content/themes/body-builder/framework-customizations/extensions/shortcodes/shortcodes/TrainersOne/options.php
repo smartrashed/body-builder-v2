@@ -5,7 +5,7 @@ if (!defined('FW')) die('Forbidden');
 $options = array(
     'section_title'   => array(
         'label'   => esc_html__('Title', 'body-builder'),
-        'desc'    => esc_html__('Home Page One Count Down Title', 'body-builder'),
+        'desc'    => esc_html__('Title', 'body-builder'),
         'type'    => 'text'
     ),
     'post_limit'   => array(

@@ -1,6 +1,7 @@
 <?php
 
-$body_logo = fw_get_db_settings_option('logo');
+$body_logo = fw_get_db_settings_options('logo');
+
 /**
  * The header for our theme
  *
@@ -35,8 +36,7 @@ $body_logo = fw_get_db_settings_option('logo');
 				            </button>
 				            <?php
 							if ( is_front_page() && is_home() ) : ?>
-				            <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo $body_logo; ?></a>
-				           <!--  <a class="navbar-brand" href="<?php //echo esc_url( home_url( '/' ) ); ?>"><img src="<?php// echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="logo" class="img-responsive"></a> -->
+				            <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_attr($body_logo['url']); ?></a>
 				        	 <?php endif; ?>
 			          </div>
 		          <!-- Collect the nav links, forms, and other content for toggling -->

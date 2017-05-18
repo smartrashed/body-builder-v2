@@ -19,12 +19,17 @@ $extraclass = $atts['extra_body_class'];
       <div class="classe-items">
         <div class="classes-slider swiper-container">
           <div class="swiper-wrapper">
-            <?php $class_info = new Wp_Query(array(
+            <?php $class_info = new WP_Query(array(
                   'post_type'=>'body_Class',
+                 'meta_key' => 'post_views_count',
+                  'orderby' => 'meta_value_num', 
                   'posts_per_page' => $post_limit
                 ));
+ //echo  body_builder_post_views(get_the_ID()); 
             ?>
             <?php while($class_info->have_posts()): $class_info->the_post()  ?>
+
+              
             <div class="class-item swiper-slide">
               <div class="image">
                 <?php the_post_thumbnail('body-builder-class-grid'); ?>

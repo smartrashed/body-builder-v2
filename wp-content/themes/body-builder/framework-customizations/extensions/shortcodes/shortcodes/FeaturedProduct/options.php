@@ -3,14 +3,13 @@ if (!defined('FW')) die('Forbidden');
 
 
 $options = array(
-    
     'section_title'   => array(
         'label'   => esc_html__('Section Title', 'body-builder'),
-        'desc'    => esc_html__('Testimonial Title', 'body-builder'),
+        'desc'    => esc_html__('Popular Class Title', 'body-builder'),
         'type'    => 'text'
     ),
     'post_limit'   => array(
-        'label'   => esc_html__('Testimonial Show Limit', 'body-builder'),
+        'label'   => esc_html__('Popular Class Show Limit', 'body-builder'),
         'type'    => 'text',
         'value' => 1
     ),
@@ -19,5 +18,5 @@ $options = array(
         'type'    => 'text',
         'desc' => esc_html__('This options is for developer to put custom class', 'body-builder'),
     ),
-    
+       
 );
