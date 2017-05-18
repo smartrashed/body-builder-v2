@@ -1,68 +1,49 @@
-<?php
+<?php 
+if (!defined( 'FW' )) die('Forbidden');
 $options = array(
-       'header_option' => array(
-            'type' => 'box',
-            'title' => __('Header Settings', '{domain}'),
-            'options' => array(
-                 
-                    
-                    
-         
-        ),
-    ),
-   'footer_option' => array(
-        'type' => 'box',
-        'title' => __('Footer settings', '{domain}'),
+    array(
+        'type'    => 'box',
         'options' => array(
-             
-                'footer_copy_right' => array(
-                    'type'  => 'text',
-                    'label' => __('Footer Text', 'body-builder'),
-                    'desc'  => __('Footer Text Description', 'body-builder'),
-                ),
-      
-            ),
-    ),
-   'gmap_option' => array(
-        'type' => 'box',
-        'title' => __('Google Map Settings', '{domain}'),
-        'options' => array(
-              'google_map_api' => array(
-                    'type'  => 'text',
-                    'label' => __('Google Map API', 'body-builder'),
-                ),
-            ),
-    ),
-   'box_id' => array(
-    'type' => 'box',
-    'options' => array(
-        'option_id'  => array( 'type' => 'text' ),
-    ),
-    'title' => __('Box Title', '{domain}'),
-    'attr' => array('class' => 'custom-class', 'data-foo' => 'bar'),
+        	'header' => array(
+		    'type' => 'tab',
+		    'options' => array(
+		        'logo'  => array( 'type' => 'upload','label'=>'Logo' ),
+		        'breadcrumbs'  => array( 'type' => 'upload','label'=>'Breadcrumbs' ),
+		        'default_breadcrumbs'  => array( 
+		        	'type' => 'switch',
+		        	'label'=>'Default Vreadcrumbs',
+		        	'left-choice' => array(
+				        'value' => '1',
+				        'label' => esc_html__('Yes', 'body-builder'),
+				    ),
+				    'right-choice' => array(
+				        'value' => '0',
+				        'label' => esc_html__('No', 'body-builder'),
+				    ),
 
-    /**
-     * When used in Post Options on the first array level
-     * the ``box`` container accepts additional parameters
-     */
-    //'context' => 'normal|advanced|side',
-    //'priority' => 'default|high|core|low',
-),
-   'tab_id' => array(
-    'type' => 'tab',
-    'options' => array(
-        'option_id'  => array( 'type' => 'text' ),
+		        	 ),
+		    ),
+		    'title' => esc_html__('Header Settings', 'body-builder'),
+		    
+			),
+			'footer' => array(
+			    'type' => 'tab',
+			    'options' => array(
+			        'footer'  => array( 'type' => 'text', 'label' => esc_html__('footer') ),
+			    ),
+			    'title' => esc_html__('Footer Settings', 'body-builder'),
+			    'attr' => array('class' => 'custom-class', 'data-foo' => 'bar'),
+			),
+        	)
     ),
-    'title' => __('Tab Title', '{domain}'),
-    'attr' => array('class' => 'custom-class', 'data-foo' => 'bar'),
-),
-'tab_id_2' => array(
-    'type' => 'tab',
-    'options' => array(
-        'option_id_2'  => array( 'type' => 'text' ),
+    /* Footer  */
+    array(
+        'type'    => 'box',
+        'options' => array()
     ),
-    'title' => __('Tab Title #2', '{domain}'),
-    'attr' => array('class' => 'custom-class', 'data-foo' => 'bar'),
-),
+    /* Footer  */
+    array(
+        'type'    => 'box',
+        'options' => array()
+    )
 );
-

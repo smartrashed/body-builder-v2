@@ -1,6 +1,6 @@
 <?php
-
-$body_logo = fw_get_db_settings_options('logo');
+//if (!defined( 'FW' )) die('Forbidden');
+$body_logo = fw_get_db_settings_option('logo');
 
 /**
  * The header for our theme
@@ -11,14 +11,13 @@ $body_logo = fw_get_db_settings_options('logo');
  *
  * @package body-builder
  */
-
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
-
 <?php wp_head(); ?>
 </head>
 
@@ -35,9 +34,9 @@ $body_logo = fw_get_db_settings_options('logo');
 				              <span class="icon-bar"></span>
 				            </button>
 				            <?php
-							if ( is_front_page() && is_home() ) : ?>
-				            <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_attr($body_logo['url']); ?></a>
-				        	 <?php endif; ?>
+							//if ( is_front_page() && is_home() ) : ?>
+				            <a class="navbar-brand" href=""><img src="<?php echo esc_attr($body_logo['url']); ?>"></a>
+				        	 <?php //endif; ?>
 			          </div>
 		          <!-- Collect the nav links, forms, and other content for toggling -->
 			          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -58,7 +57,6 @@ $body_logo = fw_get_db_settings_options('logo');
  <!--Page Header start here -->
     <section class="page-header">
       <div class="container">
-       
         <?php body_builder_breadcrumbs() ?>
       </div><!-- container -->
     </section><!-- page-header -->

@@ -25,7 +25,7 @@ $extraclass = $atts['extra_body_class'];
                   'orderby' => 'meta_value_num', 
                   'posts_per_page' => $post_limit
                 ));
- //echo  body_builder_post_views(get_the_ID()); 
+ 
             ?>
             <?php while($class_info->have_posts()): $class_info->the_post()  ?>
 

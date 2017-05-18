@@ -11,7 +11,7 @@
 if ( ! is_active_sidebar( 'body-builder-footer-widget' ) ) {
   return;
 }
-$footer_text = fw_get_db_settings_option('footer_copy_right');
+$footer_text = fw_get_db_settings_option('footer');
 
 ?>
  <!--Footer start here -->
@@ -29,7 +29,7 @@ $footer_text = fw_get_db_settings_option('footer_copy_right');
     
       <div class="footer-bottom">
         <div class="container">
-          <p><?php echo esc_html($footer_text); ?> <a href="#">Labartisan.</a></p>
+          <p><?php echo wp_kses_post($footer_text); ?></p>
         </div><!-- container -->
       </div><!-- footer-bottom -->
     </footer>
