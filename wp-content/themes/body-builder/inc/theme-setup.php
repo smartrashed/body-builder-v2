@@ -57,6 +57,7 @@ function body_builder_setup() {
         add_image_size( 'body-builder-testimonial-thumb', 150, 140, true );
         add_image_size( 'body-builder-client-item-thumb', 275, 136, true );
         add_image_size( 'body-builder-trainer-profile', 550, 576, true );
+        add_image_size( 'body-builder-breadcrums', 1920, 220, true );
 
 
         add_image_size( 'body-builder-blog-list-related', 320, 260, true );

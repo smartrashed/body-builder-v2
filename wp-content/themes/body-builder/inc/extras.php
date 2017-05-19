@@ -161,3 +161,29 @@ function body_builder_post_views($post_ID) {
     }
 }
 add_action( 'init', 'body_builder_post_views' );
+
+/**
+ * unyson icon register to display on icon picker
+ * 
+ */
+function body_builder_icon_register($current_packs) {
+    /**
+     * $current_packs is an array of pack names.
+     * You should return which one you would like to show in the picker.
+     */
+    return array('font-awesome');
+}
+
+add_filter('fw:option_type:icon-v2:filter_packs', 'body_builder_icon_register');
+
+/* Days Wise Posted On */
+
+function body_builder_days_posted_on() { 
+   /* $byline = sprintf(
+            esc_html_x( 'by %s', 'post author', 'body-builder' ),
+            '<span class="author"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+    );*/
+
+    echo '<span> ' . $byline . '</span> <a href="'.get_the_permalink().'"><span class="posted-on">' . human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago' . '</span></a>'; // WPCS: XSS OK.
+
+}

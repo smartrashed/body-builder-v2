@@ -12,6 +12,13 @@
  * @package body-builder
  */
 
+
+$blog_style = fw_get_db_settings_option('blog_style');
+
+
+
+
+
 get_header(); ?>
 
 	<section <?php post_class('blog padding-130') ?> >

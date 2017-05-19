@@ -28,13 +28,8 @@ class Body_Builder_footer_Recent_Posts extends WP_Widget {
 
 		$recent_posts = new WP_Query( array(
 			'posts_type'		=> 'post',
-			'posts_per_page'	=> $instance['number']/*,
-			'date_query' => array(
-								array(
-								'year' => $today['year'],
-								'month' => $today['mon'],
-								'day' => $today['mday'],
-								),*/
+			'posts_per_page'	=> $instance['number'],
+			
 		) );
 		if( $recent_posts->have_posts() ) : ?>
 
@@ -56,7 +51,7 @@ class Body_Builder_footer_Recent_Posts extends WP_Widget {
 							endif; ?>
 				<div class="post-content">
 					<?php the_title( '<h5><a href="'. esc_url( get_permalink() ) .'">', '</a></h5>' ); ?>
-					<span><?php the_date(strtotime("-1 days")).'|'. _e('Days ago','bosy-builder')?></span>
+					<span><?php body_builder_days_posted_on(); ?></span>
 				</div>
 			</li>
 

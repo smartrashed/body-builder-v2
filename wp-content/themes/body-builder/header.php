@@ -1,6 +1,8 @@
 <?php
 //if (!defined( 'FW' )) die('Forbidden');
 $body_logo = fw_get_db_settings_option('logo');
+$breadcrumbs = fw_get_db_settings_option('breadcrumbs');
+
 
 /**
  * The header for our theme
@@ -35,7 +37,7 @@ $body_logo = fw_get_db_settings_option('logo');
 				            </button>
 				            <?php
 							//if ( is_front_page() && is_home() ) : ?>
-				            <a class="navbar-brand" href=""><img src="<?php echo esc_attr($body_logo['url']); ?>"></a>
+				            <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo esc_attr($body_logo['url']); ?>"></a>
 				        	 <?php //endif; ?>
 			          </div>
 		          <!-- Collect the nav links, forms, and other content for toggling -->
@@ -55,9 +57,11 @@ $body_logo = fw_get_db_settings_option('logo');
       	</nav>
 	</header><!-- #masthead -->
  <!--Page Header start here -->
-    <section class="page-header">
+ <?php if(!is_front_page()) : ?>
+    <section class="page-header"<?php if (!empty($breadcrumbs['url'])): echo 'style="background-image:url('.esc_url($breadcrumbs['url']).')"'; endif; ?>>
       <div class="container">
         <?php body_builder_breadcrumbs() ?>
       </div><!-- container -->
     </section><!-- page-header -->
     <!--Page Header end here -->
+<?php endif; ?>
