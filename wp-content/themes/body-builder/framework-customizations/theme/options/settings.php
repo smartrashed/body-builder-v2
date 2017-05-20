@@ -31,14 +31,17 @@ $options = array(
 			    'options' => array(
 		        'blog_style' =>array(
                         'type'  => 'radio',
-                        'label' => esc_html__('Select Default Blog style', 'body-builder'),
-                        'choices' => array( // Note: Avoid bool or int keys http://bit.ly/1cQgVzk
-                            '1' => esc_html__('Blog Grid', 'body-builder'),
-                            '2' => esc_html__('Blog List', 'body-builder'),
-                            '3' => esc_html__('Blog Large', 'body-builder'),
-                        ),
-                        // Display choices inline instead of list
-                        'inline' => true,
+					    'attr'  => array( 'class' => 'custom-class', 'data-foo' => 'bar' ),
+					    'label' => __('Label', '{domain}'),
+					    'desc'  => __('Description', '{domain}'),
+					    'help'  => __('Help tip', '{domain}'),
+					    'choices' => array( // Note: Avoid bool or int keys http://bit.ly/1cQgVzk
+					        '1' => __('Grid', '{domain}'),
+					        '2' => __('List', '{domain}'),
+					        '3' => __('large', '{domain}'),
+					    ),
+					    // Display choices inline instead of list
+					    'inline' => false,
                     ),
 			   	),
 			    'title' => esc_html__('Blog Settings', 'body-builder'),
@@ -66,7 +69,9 @@ $options = array(
 			   	),
 			    	'title' => esc_html__('Footer Settings', 'body-builder'),
 			),
+
         	),
     ),
+    
     
 );

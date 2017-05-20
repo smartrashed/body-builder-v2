@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<section class="blog-posts padding-130">
+	<section <?php post_class('blog-posts padding-130'); ?>>
       	<div class="container">
        		 <div class="row">
           		<div class="col-md-8 col-sm-12 col-xs-12">

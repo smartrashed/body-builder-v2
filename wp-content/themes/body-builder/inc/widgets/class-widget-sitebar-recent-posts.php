@@ -50,7 +50,7 @@ class Body_Builder_sidebar_Recent_Posts extends WP_Widget {
 				<div class="content">
 					<?php the_title( '<p><a href="'. esc_url( get_permalink() ) .'">', '</a></p>' ); ?>
 					<ul class="post-meta">
-                      <li><?php the_date(); ?></li>
+                      <li><?php the_time('F d Y'); ?></li>
                     </ul>
 				</div>
 			</div>

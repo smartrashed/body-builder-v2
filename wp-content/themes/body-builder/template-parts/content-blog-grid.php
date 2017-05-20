@@ -24,7 +24,7 @@
         <div class="content">
           <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
           <ul class="post-meta">
-            <li><?php the_date(); ?></li>
+            <li><?php body_builder_posted_on(); ?></li>
           </ul>
           <p><?php echo wp_trim_words( get_the_content(), 10, false ); ?></p>
          
