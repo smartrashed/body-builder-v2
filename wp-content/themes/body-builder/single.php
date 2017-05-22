@@ -31,8 +31,8 @@ get_header(); ?>
 				</div>
 
 				<?php get_sidebar(); ?>
-			</div>
-		</div><!-- #main -->
+			</div><!--Row-->
+		</div><!-- #container -->
 	</section><!-- #primary -->
 
 <?php

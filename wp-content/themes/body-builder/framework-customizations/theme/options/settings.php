@@ -32,13 +32,13 @@ $options = array(
 		        'blog_style' =>array(
                         'type'  => 'radio',
 					    'attr'  => array( 'class' => 'custom-class', 'data-foo' => 'bar' ),
-					    'label' => __('Label', '{domain}'),
-					    'desc'  => __('Description', '{domain}'),
-					    'help'  => __('Help tip', '{domain}'),
+					    'label' => __('Default Blog Style', 'body-builder'),
+					    'desc'  => __('This section will default show on blog pages', 'body-builder'),
+					    'help'  => __('Select an option for blog style', 'body-builder'),
 					    'choices' => array( // Note: Avoid bool or int keys http://bit.ly/1cQgVzk
-					        '1' => __('Grid', '{domain}'),
-					        '2' => __('List', '{domain}'),
-					        '3' => __('large', '{domain}'),
+					        '1' => __('Grid', 'body-builder'),
+					        '2' => __('List', 'body-builder'),
+					        '3' => __('large', 'body-builder'),
 					    ),
 					    // Display choices inline instead of list
 					    'inline' => false,
@@ -57,7 +57,7 @@ $options = array(
 			   	),
 			    'title' => esc_html__('Google Map Api', 'body-builder'),
 			),
-
+			
 			/* Footer  settings */
 			'footer' => array(
 			    'type' => 'tab',
@@ -69,9 +69,10 @@ $options = array(
 			   	),
 			    	'title' => esc_html__('Footer Settings', 'body-builder'),
 			),
+			
 
-        	),
+        ),
     ),
-    
+
     
 );

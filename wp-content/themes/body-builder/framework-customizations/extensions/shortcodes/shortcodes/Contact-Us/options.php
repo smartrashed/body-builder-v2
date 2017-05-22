@@ -69,7 +69,7 @@ $options = array(
    'contact_form'   => array(
         'label'   => esc_html__('Contact Us', 'body-builder'),
         'desc'    => esc_html__('Contact Us Title', 'body-builder'),
-        'type'    => 'wp-editor'
+        'type'    => 'text'
     ),
     'map_info' => array(
         'type' => 'box',
@@ -94,7 +94,8 @@ $options = array(
                 ), 
                 'map_Zoom' => array(
                     'type' => 'text',
-                    'label' => esc_html__('Map Zoom', 'body-builder')
+                    'label' => esc_html__('Map Zoom', 'body-builder'),
+                    'value'=>1
                 ),         
             ),
          ),

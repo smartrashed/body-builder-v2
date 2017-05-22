@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 
-	<div id="comment-<?php comment_ID(); ?>" class="review-item">
+	<li id="comment-<?php comment_ID(); ?>" class="review-item">
 		<div class="image">
 		<?php
 		/**
@@ -65,4 +65,3 @@ if ( ! defined( 'ABSPATH' ) ) {
 			do_action( 'woocommerce_review_after_comment_text', $comment ); ?>
 
 		</div>
-	</div>

@@ -4,6 +4,7 @@ $body_logo = fw_get_db_settings_option('logo');
 $breadcrumbs = fw_get_db_settings_option('breadcrumbs');
 
 
+
 /**
  * The header for our theme
  *
@@ -35,10 +36,12 @@ $breadcrumbs = fw_get_db_settings_option('breadcrumbs');
 				              <span class="icon-bar"></span>
 				              <span class="icon-bar"></span>
 				            </button>
-				            <?php
-							//if ( is_front_page() && is_home() ) : ?>
-				            <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo esc_attr($body_logo['url']); ?>"></a>
-				        	 <?php //endif; ?>
+				            <?php if(!empty($body_logo['url'])) :?>
+				            <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo esc_attr($body_logo['url']); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>"></a>
+				             <?php else : ?>
+                            <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>"><h1 class="site-title"><?php echo esc_attr(get_bloginfo('name')); ?></h1></a>
+				        	<?php endif; ?>
+				       
 			          </div>
 		          <!-- Collect the nav links, forms, and other content for toggling -->
 			          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -57,8 +60,10 @@ $breadcrumbs = fw_get_db_settings_option('breadcrumbs');
       	</nav>
 	</header><!-- #masthead -->
  <!--Page Header start here -->
+
+
  <?php if(!is_front_page()) : ?>
-    <section class="page-header"<?php if (!empty($breadcrumbs['url'])): echo 'style="background-image:url('.esc_url($breadcrumbs['url']).')"'; endif; ?>>
+    <section class="page-header" <?php if (!empty($breadcrumbs['url'])): echo 'style="background-image:url('.esc_url($breadcrumbs['url']).')"'; endif; ?>>
       <div class="container">
         <?php body_builder_breadcrumbs() ?>
       </div><!-- container -->

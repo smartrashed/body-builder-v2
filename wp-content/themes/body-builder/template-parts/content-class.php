@@ -38,15 +38,15 @@ $class_dribble  = fw_get_db_post_option(get_the_ID(), 'class_dribble');
     <h2><?php the_title(); ?></h2>
     <ul>
       <?php if(!empty($class_time)) : ?>
-      <li><?php _e('Class Time :','body-builder') ?> <?php echo esc_html__( $class_time, 'body-builder' ); ?></li>
+      <li><?php _e('Class Time :','body-builder') ?> <?php echo esc_html( $class_time); ?></li>
       <?php endif; ?>
       <li><span>/</span></li>
         <?php if(!empty($trainer_name)) : ?>
-      <li><?php _e('Trainer :','body-builder') ?>  <a href="<?php the_permalink(); ?>"><?php echo esc_html__( $trainer_name, 'body-builder' ); ?></a></li>
+      <li><?php _e('Trainer :','body-builder') ?>  <a href="<?php the_permalink(); ?>"><?php echo esc_html( $trainer_name); ?></a></li>
         <?php endif; ?>
       <li><span>/</span></li>
         <?php if(!empty($course_duration)) : ?>
-      <li><?php _e('Duration :','body-builder'); ?><?php echo esc_html__( $course_duration, 'body-builder' ); ?></li>
+      <li><?php _e('Duration :','body-builder'); ?><?php echo esc_html( $course_duration); ?></li>
         <?php endif; ?>
     </ul>
     <p><?php the_content(); ?></p>
@@ -103,7 +103,7 @@ $related_posts = new WP_Query( array(
                             <div class="content">
                               <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                               <?php if(!empty($class_time)):?>
-                              <span><?php echo esc_html__($class_time , 'body-builder'); ?></span>
+                              <span><?php echo esc_html($class_time); ?></span>
                               <?php endif; ?>
                               <p><?php echo wp_trim_words( get_the_content(), 15, false ); ?></p>
                               

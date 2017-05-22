@@ -27,7 +27,7 @@ $post_limit = $atts['post_limit'];
         </div>
         <div class="content">
           <h2><a href="<?php esc_url(the_permalink()); ?>"><?php the_title(); ?></a></h2>
-          <p><?php the_content();  ?></p>
+          <?php the_content();  ?>
           <a href="<?php esc_url(the_permalink()); ?>"><?php _e('Read More','body-builder')?></a>
         </div>
       </div><!-- gallery top -->

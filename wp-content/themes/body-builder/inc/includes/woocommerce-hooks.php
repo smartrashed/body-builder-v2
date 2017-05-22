@@ -3,6 +3,9 @@
  * @package body-builder
  * @author CodexCoder 
  */
+add_theme_support( 'wc-product-gallery-zoom' );
+add_theme_support( 'wc-product-gallery-lightbox' );
+add_theme_support( 'wc-product-gallery-slider' );
 add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 8;' ), 20 );
 /**
  * Remove WooCommerce Breadcrumbs

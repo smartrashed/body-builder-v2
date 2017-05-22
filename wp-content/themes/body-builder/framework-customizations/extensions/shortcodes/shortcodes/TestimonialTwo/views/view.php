@@ -30,7 +30,7 @@ $post_limit = $atts['post_limit'];
                     <?php the_post_thumbnail('body-builder-all-testimonial-thumb'); ?>
                 </div><!-- image -->
                 <div class="content">
-                  <p><?php the_content(); ?></p>
+                  <p><?php echo wp_trim_words( get_the_content(), 15, false ); ?></p>
                   <h4><?php the_title(); ?></h4>
                   <span><?php echo esc_html__($designation = fw_get_db_post_option(get_the_ID(), 'designation'));  ?></span>
                 </div><!-- content -->

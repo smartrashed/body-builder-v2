@@ -76,7 +76,9 @@ $extraclass = $atts['extra_body_class'];
             <ul>
               <li>
               <?php if(!empty($sub_title_link)) : ?>
-              <a href="<?php esc_url($sub_title_link); ?>"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i><?php echo esc_html($sub_title); ?></a>
+              <a href="<?php esc_url($sub_title_link); ?>">
+              <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>  
+              <?php echo esc_html($sub_title); ?></a>
               <?php endif; ?>
               </li>
             </ul>
