@@ -21,9 +21,7 @@ $extraclass = $atts['extra_body_class'];
           <div class="swiper-wrapper">
             <?php $class_info = new WP_Query(array(
                   'post_type'=>'body_Class',
-                  'meta_key' => 'post_views_count',
-                  /*'orderby' => 'ASC', */
-                  'posts_per_page' => $post_limit
+                  'posts_per_page' => $post_limit,
                 ));
  
             ?>

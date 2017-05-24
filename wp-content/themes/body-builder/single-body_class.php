@@ -10,13 +10,15 @@
 get_header(); ?>
 
 	<section class="class-single padding-130">
-      	<div class="container">
-       		 <div class="row">
+	      	<div class="container">
+	       		 <div class="row"">
           		
 
 						<?php
-						while ( have_posts() ) : the_post();
+						while ( have_posts() ) : the_post(); ?>
+							
 
+							<?php 
 							get_template_part( 'template-parts/content', 'class' );
 
 
@@ -24,9 +26,10 @@ get_header(); ?>
 						?>
 						
 				
-
-				<?php //get_sidebar(); ?>
 			</div>
+
+			<?php get_sidebar(); ?>
+			
 		</div><!-- #main -->
 	</section><!-- #primary -->
 

@@ -4,9 +4,6 @@ if (!defined('FW')) die('Forbidden');
 $section_title = $atts['section_title'];
 
 /*Social Link Info*/
-$trainer_facebook  = fw_get_db_post_option(get_the_ID(), 'trainer_facebook');
-$trainer_twitter  = fw_get_db_post_option(get_the_ID(), 'trainer_twitter');
-$trainer_linkedin  = fw_get_db_post_option(get_the_ID(), 'trainer_linkedin');
 
 $extraclass = $atts['extra_body_class'];
 $post_limit = $atts['post_limit'];
@@ -29,6 +26,12 @@ $post_limit = $atts['post_limit'];
                       ));
 
                      while ($trainer_info->have_posts()) : $trainer_info->the_post()   ?>
+                      <?php 
+                           $trainer_twitter  = fw_get_db_post_option(get_the_ID(),'trainer_twitter'); 
+                           $trainer_facebook  = fw_get_db_post_option(get_the_ID(),'trainer_facebook');
+                           $trainer_linkedin  = fw_get_db_post_option(get_the_ID(),'trainer_linkedin'); 
+                    
+                   ?>
                     <div class="trainer-item swiper-slide">
                           <div class="trainer-image">
                             <?php   if( has_post_thumbnail() ) : ?>
@@ -37,15 +40,16 @@ $post_limit = $atts['post_limit'];
                             <div class="overlay"></div>
                             <div class="trainer-social">
                               <div class="trainer-social">
-                                <?php if(!empty($trainer_twitter)) :
-                                  echo '<a href="'.$trainer_twitter  = fw_get_db_post_option(get_the_ID(), 'trainer_twitter').'"><i class="fa fa-twitter" aria-hidden="true"></i></a>';
-                                endif;?>
-                                 <?php if(!empty($trainer_facebook)) :?>
+                              <?php if($trainer_twitter ): ?>
+                                <a href="<?php echo esc_url($trainer_twitter); ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                              <?php endif; ?> 
+                              <?php if($trainer_facebook ): ?> 
                                 <a href="<?php echo esc_url($trainer_facebook); ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                <?php endif; ?>
-                                <?php if(!empty($trainer_linkedin)) :?>
+                                <?php endif; ?> 
+                                <?php if($trainer_linkedin ): ?>
                                 <a href="<?php echo esc_url($trainer_linkedin); ?>"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                                <?php endif;?>
+                                <?php endif; ?> 
+                               
                               </div>
                             </div>
                           </div><!-- trainer image -->

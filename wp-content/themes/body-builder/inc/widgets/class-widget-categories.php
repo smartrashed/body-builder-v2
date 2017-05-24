@@ -43,7 +43,7 @@ class Widget_Categories extends WP_Widget {
             <?php $categories = get_terms( 'category', array( 
                 'orderby'       => 'name',
                 'hide_empty'    => true,
-                'show_count'    => 1
+                'show_count'    => true
             ) );
 
             foreach( $categories as $category ) :
@@ -51,9 +51,9 @@ class Widget_Categories extends WP_Widget {
                 <li>
                     <a href="<?php echo esc_url( $category_link ); ?>">
                     <i class="fa fa-caret-right" aria-hidden="true"></i><?php echo esc_html( $category->name ); ?>
-                    <?php if( ! empty( $instance['count'] ) ) : ?>
+                   
                     <span><?php echo esc_html( $category->count)?></span>
-                    <?php endif; ?>
+                   
                     </a>
                     
                 </li>

@@ -1117,3 +1117,89 @@ outline: none;
 .site-title{
 	color:#FCCF3E;
 }
+.post_comment .comment-respond .comment_input_name:focus{
+	border: 1px solid #fccf3e;
+}
+.post_comment .comment-respond .comment_input_email:focus{
+	border: 1px solid #fccf3e;
+}
+.post_comment .comment-respond .comment_input_phone:focus{
+	border: 1px solid #fccf3e;
+}
+.form-submit .submit:hover {
+	background-color: #000;
+	color:#fff;
+}
+
+.page-content .search-submit:hover{
+	background-color: #000;
+	color:#fff;
+}
+.page-content .search-form .search-field{
+	width: 50%;
+}
+.page-content .search-form .search-field:focus{
+	border: 1px solid #fccf3e;
+}
+
+
+/*=================================
+38. Page Not Found
+==================================*/
+.page-not-found {
+ text-align: center;
+ overflow: hidden;
+ padding-bottom: 5px;
+}
+.page-not-found h1 {
+    font-size: 280px;
+    color: #fccf3e;
+    text-shadow: 5px 0px 0px #fccf3e;
+}
+.page-not-found h2 {
+    font-size: 48px;
+    color: #333333;
+    margin: 10px 0 8px;
+}
+.page-not-found h3 {
+ color: #555555;
+}
+.page-not-found a.button {
+ 	text-transform: uppercase;
+ 	padding: 10px 20px;
+	display: inline-block;
+	background: #fccf3e;
+	color: #FFF;
+	margin: 20px;
+	border-radius: 5px;
+}
+.page-not-found a.button:hover{
+	text-decoration:none;
+}
+.hover-effect-two:visited{
+	color: #000;
+}
+.default-button:visited{
+	color: #000;
+}
+/* Single Page Cart Button */
+.default-button:hover{
+    color: #FFF !important;
+    text-decoration: none;
+}
+
+.main-menu .navbar-toggle button:hover{
+	background: none;
+}
+/*Update Cart Button */
+.single-post .content{
+	padding: 0!important;
+}
+.post-item{
+	margin-bottom: 5px !important;
+}
+
+.sidebar-item{
+	margin-top: -27px;
+}
+/*Category */

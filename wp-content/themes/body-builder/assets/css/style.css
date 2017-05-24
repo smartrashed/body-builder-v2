@@ -2927,8 +2927,11 @@ input[type="submit"][disabled]:focus {
     color: #55575d;
 }
 .single-post{
-    border-bottom: 1px solid #e4e7e9;
+    /*single code*/
+}
+.body-single{
     margin-bottom: 80px;
+    border-bottom: 1px solid #e4e7e9;
 }
 .single-post .image{
     overflow: hidden;

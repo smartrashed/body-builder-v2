@@ -13,9 +13,10 @@ $options = array(
                 'label' => esc_html__('Image Thumb', 'body-builder'),                
             ),
             'logo_link' => array(
-            'label'   => esc_html__('Image Link', 'body-builder'),
-            'type'    => 'text',
-            'desc' => esc_html__('Put Here The Logo Link', 'body-builder'),),
+                'label'   => esc_html__('Image Link', 'body-builder'),
+                'type'    => 'text',
+                'desc' => esc_html__('Put Here The Logo Link', 'body-builder'),
+            ),
         ),
         
         'limit' => 0, // limit the number of boxes that can be added

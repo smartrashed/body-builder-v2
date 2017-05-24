@@ -32,32 +32,7 @@ $options= array(
                     'desc'  =>'Put a Link Here',
                     'help'=>'Example: http://example.com'
                 ),
-                'class_social_info' => array(
-                'type' => 'box',
-                'title' => __('Class Social Information', 'body-builder'),
-                'options' => array(
-                        'class_facebook' => array(
-                            'type' => 'text',
-                            'label' => __('Facebook', 'body-builder')
-                        ),
-                         'class_twitter' => array(
-                            'type' => 'text',
-                            'label' => __('Twitter', 'body-builder')
-                        ),
-                        'class_linkedin' => array(
-                            'type' => 'text',
-                            'label' => __('Linked In', 'body-builder')
-                        ),
-                         'class_behance' => array(
-                            'type' => 'text',
-                            'label' => __('Behance', 'body-builder')
-                        ),
-                         'class_dribble' => array(
-                            'type' => 'text',
-                            'label' => __('Dribble', 'body-builder')
-                        ),
-                    ),
-                ),
+                
                 
             ),
          ),

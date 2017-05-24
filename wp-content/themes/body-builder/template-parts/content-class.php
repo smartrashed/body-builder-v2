@@ -52,25 +52,9 @@ $class_dribble  = fw_get_db_post_option(get_the_ID(), 'class_dribble');
     <p><?php the_content(); ?></p>
     <div class="bottom">
       <input type="submit" name="join-now" value="Join Now">
-      <ul class="gym-share">
-        <li><span>Share:</span></li>
-        <?php if( ! empty( $class_facebook ) ) :
-          echo '<li><a href="'. esc_url( $class_facebook ) .'"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>';
-          endif; ?>
-         <?php if( ! empty( $class_twitter ) ) :
-          echo '<li><a href="'. esc_url( $class_twitter ) .'"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>';
-          endif; ?>
-        <?php if( ! empty( $class_linkedin ) ) :
-          echo '<li><a href="'. esc_url( $class_linkedin ) .'"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>';
-          endif; ?>
-        <?php if( ! empty( $class_behance ) ) :
-          echo '<li><a href="'. esc_url( $class_behance ) .'"><i class="fa fa-behance" aria-hidden="true"></i></a></li>';
-          endif; ?>
-        <?php if( ! empty( $class_dribble ) ) :
-          echo '<li><a href="'. esc_url( $class_dribble ) .'"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>';
-          endif; ?>
-         </ul>
+       <?php body_builder_social_share($post->ID); ?>
     </div>
+    
   </div>
 </div><!-- class-single-item -->
 <div class="class-benifits">

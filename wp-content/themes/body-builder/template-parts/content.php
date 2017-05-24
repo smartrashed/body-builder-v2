@@ -9,7 +9,7 @@
 ?>
 
 
-<div <?php post_class('single-post'); ?>>
+<div <?php post_class('body-single'); ?>>
  	<div class="image">
  			<?php
 			if( has_post_thumbnail() ) :
