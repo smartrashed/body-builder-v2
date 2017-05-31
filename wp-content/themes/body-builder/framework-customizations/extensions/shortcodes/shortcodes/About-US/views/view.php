@@ -1,13 +1,19 @@
 <?php 
 if (!defined('FW')) die('Forbidden');
 
+$about_title = '';
+$about_image = '';
+$content_title = '';
+$content_description = '';
+$extraclass = '';
 
+if(defined('FW')):
 $about_title = $atts['about_title'];
 $about_image = $atts['about_image'];
 $content_title = $atts['content_title'];
 $content_description = $atts['content_description'];
 $extraclass = $atts['extra_body_class'];
-
+endif;
 
 ?>
 <!--About start here -->
@@ -25,7 +31,7 @@ $extraclass = $atts['extra_body_class'];
       <div class="col-md-6 col-sm-6 col-xs-12">
         <div class="about-content">
          <?php if(!empty($about_title)): ?>
-          <h4><?php echo esc_html__($content_title); ?></h4>
+          <h4><?php echo esc_html($content_title); ?></h4>
          <?php endif; ?>
          <?php
           if(!empty($content_description)):?> 

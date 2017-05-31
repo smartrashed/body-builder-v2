@@ -1,10 +1,13 @@
 <?php 
 if (!defined('FW')) die('Forbidden');
 
+
+if(defined('FW')):
 $section_title = $atts['section_title'];
 $image_galleries = $atts['image_gallery'];
 $overlay_icon = $atts['overlay_icon'];
 $extraclass = $atts['extra_body_class'];
+endif;
 ?>
 <!--Gallery start here -->
 <div class="image-gellary padding-130 <?php echo esc_attr($extraclass) ?>">

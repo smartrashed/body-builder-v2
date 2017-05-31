@@ -26,7 +26,7 @@
           <ul class="post-meta">
             <li><?php body_builder_posted_on(); ?></li>
           </ul>
-          <p><?php echo wp_trim_words( get_the_content(), 10, false ); ?></p>
+          <p><?php echo wp_trim_words( get_the_content(), 100, false ); ?></p>
          
         </div><!-- content -->
     </div><!-- post item -->

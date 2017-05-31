@@ -1,15 +1,5 @@
 <?php
-/**
- * Template for comments and pingbacks.
- *
- * Used as a callback by wp_list_comments() for displaying the comments.
- *
- * @link http://codex.wordpress.org/Function_Reference/wp_list_comments
- * @package body-builder
- * @since 1.0.0
- * @version 1.0.0
- * @author CodexCoder
- */
+//numeric pagination
 function body_builder_numeric_pagination() {
 
 	if( is_singular() )
@@ -39,7 +29,7 @@ function body_builder_numeric_pagination() {
 		$links[] = $paged + 1;
 	}
 
-	echo '<div class="pagination"><ul>' . "\n";
+	echo '<div class="post-pagination-area pagination"><ul class="pagination">' . "\n";
 
 	/**	Previous Post Link */
 	if ( get_previous_posts_link() )
@@ -73,16 +63,8 @@ function body_builder_numeric_pagination() {
 
 	/**	Next Post Link */
 	if ( get_next_posts_link() )
-		printf( '<li>%s</li>' . "\n", get_next_posts_link('<i class="fa fa-angle-double-right" aria-hidden="true"></i> Next') );
+		printf( '<li>%s</li>' . "\n", get_next_posts_link('Next <i class="fa fa-angle-double-right" aria-hidden="true"></i>') );
 
-	echo '</ul>' . "\n";
-
-	echo '<span>' . "\n";
-
-	echo 'Page ' . $paged . ' of ' . $max;
-
-	echo '</span>' . "\n";
-
-	echo '</div>' . "\n";
+	echo '</ul></div>' . "\n";
 
 }

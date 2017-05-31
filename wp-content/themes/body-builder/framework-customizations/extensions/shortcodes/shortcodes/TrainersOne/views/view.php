@@ -55,7 +55,7 @@ $post_limit = $atts['post_limit'];
                           </div><!-- trainer image -->
                             <div class="trainer-details">
                                 <h4><a href="<?php esc_url(the_permalink()); ?>"><?php the_title(); ?></a></h4>
-                                <p><?php echo $trainer_designation  = fw_get_db_post_option(get_the_ID(),'trainer_designation'); ?></p>
+                                <p><?php echo esc_html($trainer_designation  = fw_get_db_post_option(get_the_ID(),'trainer_designation')); ?></p>
                                   
                             </div><!-- trainer-details -->
                     </div><!-- trainer-item -->

@@ -1,9 +1,10 @@
 <?php 
 if (!defined('FW')) die('Forbidden');
 
-
+if(defined('FW')):
 $extraclass = $atts['extra_body_class'];
 $post_limit = $atts['post_limit'];
+endif;
 ?>
 
 <!--Pricing start here -->
@@ -23,16 +24,16 @@ $post_limit = $atts['post_limit'];
           <div class="pricing-item">
            
             <h4><?php the_title(); ?></h4>
-            <h3><?php echo esc_html__($price  = fw_get_db_post_option(get_the_ID(), 'price')); ?></h3>
-            <p><?php echo esc_html__($membership  = fw_get_db_post_option(get_the_ID(), 'membership')); ?></p>
-            <p><?php echo esc_html__($days_access  = fw_get_db_post_option(get_the_ID(), 'days_access')); ?></p>
-            <p><?php echo esc_html__($training_days  = fw_get_db_post_option(get_the_ID(), 'training_days')); ?></p>
-            <p><?php echo esc_html__($access_instuments  = fw_get_db_post_option(get_the_ID(), 'access_instuments')); ?></p>
-            <p><?php echo esc_html__($fitness_book  = fw_get_db_post_option(get_the_ID(), 'fitness_book')); ?></p>
-            <p><?php echo esc_html__($fitness_tutorials  = fw_get_db_post_option(get_the_ID(), 'fitness_tutorials')); ?></p>
-            <p><?php echo esc_html__($attend_compitions  = fw_get_db_post_option(get_the_ID(), 'attend_compitions')); ?></p>
+            <h3><?php echo fw_get_db_post_option(get_the_ID(), 'price'); ?></h3>
+            <p><?php echo esc_html($membership  = fw_get_db_post_option(get_the_ID(), 'membership')); ?></p>
+            <p><?php echo esc_html($days_access  = fw_get_db_post_option(get_the_ID(), 'days_access')); ?></p>
+            <p><?php echo esc_html($training_days  = fw_get_db_post_option(get_the_ID(), 'training_days')); ?></p>
+            <p><?php echo esc_html($access_instuments  = fw_get_db_post_option(get_the_ID(), 'access_instuments')); ?></p>
+            <p><?php echo esc_html($fitness_book  = fw_get_db_post_option(get_the_ID(), 'fitness_book')); ?></p>
+            <p><?php echo esc_html($fitness_tutorials  = fw_get_db_post_option(get_the_ID(), 'fitness_tutorials')); ?></p>
+            <p><?php echo esc_html($attend_compitions  = fw_get_db_post_option(get_the_ID(), 'attend_compitions')); ?></p>
            
-            <a href="<?php the_permalink(); ?>">Join Now</a>
+            <a href="<?php the_permalink(); ?>"><?php esc_heml__('Join Now','body-builder') ?></a>
           </div><!-- pricing-item -->
           
         </div>

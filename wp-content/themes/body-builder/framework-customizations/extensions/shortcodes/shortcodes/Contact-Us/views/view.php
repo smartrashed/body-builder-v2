@@ -1,8 +1,7 @@
 <?php 
 if (!defined('FW')) die('Forbidden');
 
-
-
+if(defined('FW')):
 $contact_us = $atts['contact_us'];
 
 /*  Address Info */
@@ -29,9 +28,10 @@ $map_title = $atts['map_title'];
 $latitude = $atts['latitude'];
 $longitude = $atts['longitude'];
 $map_icon = $atts['map_icon'];
+$map_Zoom = $atts['map_Zoom'];
 
 $extraclass = $atts['extra_body_class'];
-
+endif; 
 ?>
 <!--Contact us start here -->
 <div class="contact-us <?php echo esc_attr($extraclass) ?>">
@@ -97,7 +97,7 @@ $extraclass = $atts['extra_body_class'];
     </div><!-- container -->
   </div>
   
-  <div  class="contact-map" id="map_canvas" data-map-title="<?php echo esc_attr( $map_title ); ?>"  data-map-icon="<?php echo esc_url( $map_icon['url'] ); ?>" data-map-latitute="<?php echo esc_html( $latitude ); ?>" data-map-longitude="<?php echo esc_html( $longitude ); ?>"></div>
+  <div  class="contact-map" id="map_canvas" data-map-title="<?php echo esc_attr( $map_title ); ?>"  data-map-icon="<?php echo esc_url( $map_icon['url'] ); ?>" data-map-latitute="<?php echo esc_html( $latitude ); ?>" data-map-longitude="<?php echo esc_html( $longitude ); ?>" data-map-zoom="<?php echo esc_html( $map_Zoom ); ?>" ></div>
     
   </div><!-- contact-map -->
 

@@ -4,7 +4,9 @@
  */
 global $wp_version;
 if(version_compare('3.3.2',$wp_version,'>=')) {
-    $theme_info = get_theme_data(get_template_directory() . '/style.css');
+    $theme_info = wp_get_theme(get_template_directory() . '/style.css');
+   
+
     $cfg['theme_version'] = $theme_info['Version'];
 } else {
     $theme_info = wp_get_theme(null, WP_CONTENT_DIR . '/themes/');

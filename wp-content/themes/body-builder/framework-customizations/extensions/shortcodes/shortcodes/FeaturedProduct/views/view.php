@@ -1,12 +1,12 @@
 <?php 
 if (!defined('FW')) die('Forbidden');
 
-
+if(defined('FW')):
 $section_title = $atts['section_title'];
 $post_limit = $atts['post_limit'];
 $extraclass = $atts['extra_body_class'];
 
-
+endif;
 
 ?>
 <div class="products">
@@ -35,7 +35,7 @@ $extraclass = $atts['extra_body_class'];
                   </div><!-- image -->
                   <div class="content">
                     <?php the_title('<h4>','</h4>'); ?>
-                    <span>$ 90.00</span>
+                    <span><?php echo esc_html($price); ?></span>
                   </div><!-- content -->
                 </div><!-- product-item -->
               </div><!-- swiper-slide -->

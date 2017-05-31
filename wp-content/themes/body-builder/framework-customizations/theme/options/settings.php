@@ -52,7 +52,7 @@ $options = array(
 			    'options' => array(
 			        'gmapapi'  => array( 
 			        'type' => 'text', 
-			        'label' => esc_html__('Googl Map Api') 
+			        'label' => esc_html__('Googl Map Api','body-builder') 
 			        ),
 			   	),
 			    'title' => esc_html__('Google Map Api', 'body-builder'),
@@ -64,7 +64,7 @@ $options = array(
 			    'options' => array(
 			        'footer'  => array( 
 			        'type' => 'textarea', 
-			        'label' => esc_html__('Footer Text ') 
+			        'label' => esc_html__('Footer Text ','body-builder') ,
 			        ),
 			   	),
 			    	'title' => esc_html__('Footer Settings', 'body-builder'),

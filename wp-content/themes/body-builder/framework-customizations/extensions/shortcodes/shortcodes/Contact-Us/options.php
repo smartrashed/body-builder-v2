@@ -92,7 +92,11 @@ $options = array(
                     'type' => 'icon-v2',
                     'label' => esc_html__('Map Icon', 'body-builder')
                 ), 
-                        
+                'map_Zoom' => array(
+                    'type' => 'text',
+                    'label' => esc_html__('Map Zoom', 'body-builder'),
+                    'value'=>1
+                ),         
             ),
          ),
     'extra_body_class'   => array(

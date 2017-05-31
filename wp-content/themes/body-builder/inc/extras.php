@@ -112,17 +112,6 @@ function body_builder_move_comment_field_to_bottom( $fields ) {
 add_filter( 'comment_form_fields', 'body_builder_move_comment_field_to_bottom' );
 
 
-/**
-* Coment Reply Extra Icon
-**/
-
-
-function comment_reply_link_filter($content){
-    return '<i class="fa fa-reply" aria-hidden="true">' . $content . '</i>';
-}
-add_filter('comment_reply_link', 'comment_reply_link_filter', 99);
-
-
 
 //add post view counter
 function body_builder_post_views($post_ID) {
@@ -178,10 +167,9 @@ add_filter('fw:option_type:icon-v2:filter_packs', 'body_builder_icon_register');
 
 /* Days Wise Posted On */
 
-
-
 function body_builder_days_posted_on() { 
-    
-    echo ' <a href="'.get_the_permalink().'"><span class="posted-on">' . human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago' . '</span></a>'; // WPCS: XSS OK.
+   
+
+    echo '<span> ' . $byline . '</span> <a href="'.get_the_permalink().'"><span class="posted-on">' . human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago' . '</span></a>'; // WPCS: XSS OK.
 
 }

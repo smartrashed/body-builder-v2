@@ -11,8 +11,8 @@
  *
  * @package body-builder
  */
+?>
 
-get_header(); ?>
 
 	<section <?php post_class('blog-grid padding-130'); ?>>
 		<div class="container">
@@ -38,35 +38,18 @@ get_header(); ?>
 									 * Include the Post-Format-specific template for the content.
 									 * If you want to override this in a child theme, then include a file
 									 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-									 */?>
+									 */
 									 
-												<div class="col-md-6 col-sm-6 col-xs-12">
-												    <div class="news-item">
-												        <div class="image">
-												          <?php
-												          if( has_post_thumbnail() ) :
-												            the_post_thumbnail('body-builder-blog-grid');
-												          endif; ?>
-												        </div><!-- image -->
-												        <div class="content">
-												          <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-												          <ul class="post-meta">
-												            <li><?php body_builder_posted_on(); ?></li>
-												          </ul>
-												          <p><?php echo wp_trim_words( get_the_content(), 10, false ); ?></p>
-												         
-												        </div><!-- content -->
-												    </div><!-- post item -->
-												</div>	
+										get_template_part( 'template-parts/content', 'blog-list' );
 										
-								<?php
+								
 								endwhile;
 
 								body_builder_numeric_pagination(); 
 						
 							else :
 
-								get_template_part( 'template-parts/content', 'none' );
+								get_template_part( '../content', 'none' );
 
 						endif; 			?>			
 					
@@ -77,5 +60,3 @@ get_header(); ?>
 		</div><!-- #container -->
 	</section><!-- #section -->
 
-<?php
-get_footer();

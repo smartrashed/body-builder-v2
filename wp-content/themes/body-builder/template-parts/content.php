@@ -23,17 +23,19 @@
 			else :
 				the_title( '<h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			endif;
-
-			if ( 'post' === get_post_type() ) : ?>
+			?>
+			
 			<ul class="post-meta">
               <?php body_builder_posted_on(); ?>
-            </u><!-- .entry-meta -->
-			<?php
-			endif; ?>
+            </ul><!-- .entry-meta -->
+			
 			<!-- .entry-header -->
 
 	
 			<?php
+			if ( is_singular() && get_option( 'thread_comments' ) )
+			wp_enqueue_script( 'comment-reply' ); 
+
 				the_content( sprintf(
 					/* translators: %s: Name of current post. */
 					wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'body-builder' ), array( 'span' => array( 'class' => array() ) ) ),

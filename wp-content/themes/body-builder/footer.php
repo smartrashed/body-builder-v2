@@ -8,10 +8,14 @@
  *
  * @package body-builder
  */
+if(defined('FW')):
+$footer_text = fw_get_db_settings_option('footer');
+endif;
+
+
 if ( ! is_active_sidebar( 'body-builder-footer-widget' ) ) {
   return;
 }
-$footer_text = fw_get_db_settings_option('footer');
 
 ?>
  <!--Footer start here -->

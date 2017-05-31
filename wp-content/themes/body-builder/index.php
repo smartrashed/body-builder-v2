@@ -13,13 +13,17 @@
  */
 
 
+
+
+$blog_style = '3';
+if (defined('FW')):
 $blog_style = fw_get_db_settings_option('blog_style');
-
-
-get_header(); 
-
-if($blog_style):
-get_template_part('template-parts/blogs/blog',$blog_style);
 endif;
+
+
+
+get_header(); ?>
+
+<?php get_template_part('template-parts/blogs/blog', $blog_style);
 
 get_footer();

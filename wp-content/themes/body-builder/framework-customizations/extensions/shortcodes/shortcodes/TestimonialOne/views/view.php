@@ -2,8 +2,9 @@
 if (!defined('FW')) die('Forbidden');
 
 
-
+if(defined('FW')):
 $extraclass = $atts['extra_body_class'];
+endif;
 ?>
 
 <!--Testimonial start here -->
@@ -33,7 +34,7 @@ $extraclass = $atts['extra_body_class'];
           while ($testimonial_info->have_posts()) : $testimonial_info->the_post() ?>
           <div role="tabpanel" class="testimonial-item tab-pane<?php echo ( $i == 1 ) ? esc_attr( ' active' ) : ''; ?>" id="review-0<?php echo esc_attr($i); ?>">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/testimonial/testimonial-icon.png" alt="client icon" class="img-responsive">
-            <h4><?php the_title(); ?>, <span><?php echo esc_html__($designation = fw_get_db_post_option(get_the_ID(), 'designation'));  ?></span></h4>
+            <h4><?php the_title(); ?>, <span><?php echo esc_html($designation = fw_get_db_post_option(get_the_ID(), 'designation'));  ?></span></h4>
             <?php the_content(); ?>
           </div>
           

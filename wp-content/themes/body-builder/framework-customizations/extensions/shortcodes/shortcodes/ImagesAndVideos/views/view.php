@@ -1,12 +1,11 @@
 <?php 
 if (!defined('FW')) die('Forbidden');
 
-
+if(defined('FW')):
 $section_title = $atts['section_title'];
 $gallery_items = $atts['gallery'];
 $image_items = $atts['images'];
-
-
+endif;
 ?>
    <!--Gallery start here -->
 <div class="gallery-two <?php echo esc_attr($extraclass) ?>">

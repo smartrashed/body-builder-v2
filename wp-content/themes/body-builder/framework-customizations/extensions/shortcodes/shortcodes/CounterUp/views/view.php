@@ -1,7 +1,7 @@
 <?php 
 if (!defined('FW')) die('Forbidden');
 
-
+if(defined('FW')):
 $title1 = $atts['title1'];
 $count1 = $atts['count1'];
 $title2 = $atts['title2'];
@@ -11,7 +11,7 @@ $count3 = $atts['count3'];
 $title4 = $atts['title4'];
 $count4 = $atts['count4'];
 $extraclass = $atts['extra_body_class'];
-
+endif;
 ?>
 <!--Gallery start here -->
  <!--Fun facts start here -->

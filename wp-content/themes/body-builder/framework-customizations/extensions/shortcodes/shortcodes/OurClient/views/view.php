@@ -1,10 +1,10 @@
 <?php 
 if (!defined('FW')) die('Forbidden');
 
-
+if(defined('FW')):
 $partner_logos = $atts['logos'];
 $extraclass = $atts['extra_body_class'];
-
+endif;
 ?>
 <!--Client start here -->
 <div class="client <?php echo esc_attr($extraclass); ?>">

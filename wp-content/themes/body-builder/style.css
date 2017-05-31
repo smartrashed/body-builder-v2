@@ -1,6 +1,6 @@
 /*
 Theme Name: body-builder
-Theme URI: http://underscores.me/
+Theme URI: http://codexcoder.me/
 Author: Codex Coder
 Author URI: http://www.codexcoder.com
 Description: The Body Builder theme is made for all kind of GYM,Health centre
@@ -8,7 +8,7 @@ Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: body-builder
-Tags:
+Tags: one-column, two-columns, right-sidebar, custom-colors, featured-images, sticky-post, theme-options, threaded-comments
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -865,6 +865,26 @@ ul, ol {
     outline: none;
 }
 
+.comment-meta strong a{
+	font-size: 20px;
+}
+.comment-meta strong a:hover{
+	color: #000000;
+	text-decoration: none;
+}
+.comment-meta a{
+	font-size: 15px;
+	line-height: 24px;
+	font-weight: 700;
+	color: #a3a8ab;
+	text-decoration: none;
+	text-transform: capitalize;
+}
+.comment-meta a:hover{
+	color: #000000;
+	text-decoration: none;
+}
+
 .submit:hover {
     background-color: #171717;
     color: #fff;
@@ -938,6 +958,12 @@ border: 1px solid transparent;
 }
 .content ul{
 	margin-left: 0;
+	padding-left: 20px;
+}
+.content > .post-meta{
+	margin-left: 0;
+	padding-left: 0px;
+	padding-bottom: 20px;
 }
 .update_cart button:hover{
 	line-height: 2px;
@@ -1195,11 +1221,115 @@ outline: none;
 .single-post .content{
 	padding: 0!important;
 }
-.sidebar-item .post-item{
+.post-item{
 	margin-bottom: 5px !important;
 }
 
-.sidebar-item{
+/*.sidebar-item{
 	margin-top: -27px;
+}*/
+/*Fresh Menu /Blcnk Menu */
+
+
+.post-item .content {
+    display: table;
+    padding-bottom: 25px;
 }
-/*Category */
+
+
+/*BreadCrumbs Design*/
+.breadcrumbs .item-home .bread-link .bread-home{
+	text-decoration: none;
+	color: #171717;
+}
+.container ol li a{
+	text-decoration: none;
+	color: #171717;
+}
+.sidebar-item ul li a {
+	font-size: 16px;
+	line-height: 24px;
+	color: #171717;
+	text-decoration: none;
+}
+/*Comment Edit Link */
+
+.sidebar-item ul li a:hover{
+	color: #fccf3e;
+}
+
+.related-post .post-item{
+    padding-bottom: 25px;
+}
+
+.comment-reply-link{
+	font-size: 14px;
+line-height: 30px;
+color: #fff;
+background-color: #363636;
+text-decoration: none;
+display: inline-block;
+padding: 0px 5px;
+}
+
+.comment-reply-link:hover{
+	text-decoration: none;
+	color: #fff;
+}
+.comment-reply-link:visited{
+	text-decoration: none;
+	color: #fff;
+}
+.comment-reply-link{
+	font-size: 14px;
+	line-height: 30px;
+	color: #fff;
+	background-color: #363636;
+	text-decoration: none;
+	display: inline-block;
+	padding: 0px 20px;
+	border-radius: 3px;
+}
+
+
+/*Post Password*/
+.post-password-form submit{
+	background: #000;
+	color: #fff;
+}
+
+.comment-content> a:before{
+	content: " \f122";
+    font-family: FontAwesome;
+}
+
+.post-password-form input[type="submit"]:hover{
+	background: #000;
+	color: #FFF;
+}
+
+.post-password-form input[type="password"]:focus {
+    border-color: #fccf3e;
+}
+
+.calendar_wrap a:focus, a:hover {
+    color: #fccf3e;
+    text-decoration: none;
+}
+
+.page-template-default  .content-area{
+	margin: 150px 100px;
+}
+
+
+
+.pagination > .active > a{
+	background-color: #fccf3e !important;
+	color: #171717 !important;
+	border: 1px solid #fccf3e !important;
+}
+
+.post-password-form label {
+	font-size: 13px !important;
+	
+}

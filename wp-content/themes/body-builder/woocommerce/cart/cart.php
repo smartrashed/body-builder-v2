@@ -32,10 +32,10 @@ do_action( 'woocommerce_before_cart' ); ?>
 			<table>
 				<thead>
 					<tr>
-						<th colspan="2"><?php _e( 'Product', 'woocommerce' ); ?></th>
-						<th><?php _e( 'Price', 'woocommerce' ); ?></th>
-						<th><?php _e( 'Quantity', 'woocommerce' ); ?></th>
-						<th class="total-cart"><?php _e( 'Total', 'woocommerce' ); ?></th>
+						<th colspan="2"><?php _e( 'Product', 'body-builder' ); ?></th>
+						<th><?php _e( 'Price', 'body-builder' ); ?></th>
+						<th><?php _e( 'Quantity', 'body-builder' ); ?></th>
+						<th class="total-cart"><?php _e( 'Total', 'body-builder' ); ?></th>
 						<th class="remove-cart"></th>
 					</tr>
 				</thead>
@@ -51,7 +51,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 							$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
 							?>
 							<tr class="<?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
-								<td colspan="2" class="product-thumbnail" data-title="<?php esc_attr_e( 'Product', 'woocommerce' ); ?>">
+								<td colspan="2" class="product-thumbnail" data-title="<?php esc_attr_e( 'Product', 'body-builder' ); ?>">
 									
 									<?php
 										$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image('body-builder-shop-thumb'), $cart_item, $cart_item_key );
@@ -77,14 +77,14 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 										// Backorder notification
 										if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
-											echo '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'woocommerce' ) . '</p>';
+											echo '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'body-builder' ) . '</p>';
 										}
 									?>
 										</h4>
 									
 								</td>
 
-								<td data-title="<?php esc_attr_e( 'Price', 'woocommerce' ); ?>">
+								<td data-title="<?php esc_attr_e( 'Price', 'body-builder' ); ?>">
 									<span>
 									<?php
 										echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key );
@@ -92,7 +92,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 									</span>
 								</td>
 
-								<td class="quantity" data-title="<?php esc_attr_e( 'Quantity', 'woocommerce' ); ?>">
+								<td class="quantity" data-title="<?php esc_attr_e( 'Quantity', 'body-builder' ); ?>">
 									<?php
 										if ( $_product->is_sold_individually() ) {
 											$product_quantity = sprintf( '1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key );
@@ -109,7 +109,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 									?>
 								</td>
 
-								<td class="total-cart" data-title="<?php esc_attr_e( 'Total', 'woocommerce' ); ?>">
+								<td class="total-cart" data-title="<?php esc_attr_e( 'Total', 'body-builder' ); ?>">
 									<span>
 									<?php
 										echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key );
@@ -121,7 +121,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 										echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
 											'<a href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s"><span><i class="fa fa-times" aria-hidden="true"></i></span></a>',
 											esc_url( WC()->cart->get_remove_url( $cart_item_key ) ),
-											__( 'Remove this item', 'woocommerce' ),
+											__( 'Remove this item', 'body-builder' ),
 											esc_attr( $product_id ),
 											esc_attr( $_product->get_sku() )
 										), $cart_item_key );
@@ -140,15 +140,15 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 							<?php if ( wc_coupons_enabled() ) { ?>
 								<div class="coupon">
-									<?php _e( 'Coupon:', 'woocommerce' ); ?><input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Enter Discount Code', 'woocommerce' ); ?>" /> <input type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply', 'woocommerce' ); ?>" />
+									<?php _e( 'Coupon:', 'body-builder' ); ?><input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Enter Discount Code', 'body-builder' ); ?>" /> <input type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply', 'body-builder' ); ?>" />
 									<?php do_action( 'woocommerce_cart_coupon' ); ?>
 								</div>
 							<?php } ?>
 
 							
 							<div class="update">
-								<input type="submit" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>" />
-		                        <input type="submit" name="proceed" value="<?php esc_html_e( 'Proceed to checkout', 'woocommerce' ); ?>"/>
+								<input type="submit" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'body-builder' ); ?>" />
+		                        <input type="submit" name="proceed" value="<?php esc_html_e( 'Proceed to checkout', 'body-builder' ); ?>"/>
 		                 	</div>
 		                
 							<?php do_action( 'woocommerce_cart_actions' ); ?>

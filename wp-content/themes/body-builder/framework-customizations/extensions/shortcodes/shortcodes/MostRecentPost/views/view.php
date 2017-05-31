@@ -2,10 +2,10 @@
 if (!defined('FW')) die('Forbidden');
 
 
-
+if(defined('FW')):
 $extraclass = $atts['extra_body_class'];
 $post_limit = $atts['post_limit'];
-
+endif;
 
 ?>
   <!--Gallery start here -->

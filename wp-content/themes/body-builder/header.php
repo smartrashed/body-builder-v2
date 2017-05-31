@@ -1,15 +1,4 @@
 <?php
-if (!defined( 'FW' )) die('Forbidden');
-
-
-$body_logo = '';
-$breadcrumbs = '';
-if (defined('FW')):
-$body_logo = fw_get_db_settings_option('logo');
-$breadcrumbs = fw_get_db_settings_option('breadcrumbs');
-endif;
-
-
 /**
  * The header for our theme
  *
@@ -19,6 +8,17 @@ endif;
  *
  * @package body-builder
  */
+
+
+
+
+if (defined('FW')):
+$body_logo = fw_get_db_settings_option('logo');
+$breadcrumbs = fw_get_db_settings_option('breadcrumbs');
+endif;
+
+
+
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -30,8 +30,8 @@ endif;
 </head>
 
 <body <?php body_class(); ?>>
-	<header id="masthead" class="site-header" role="banner">	
-		 <nav class="main-menu">
+	<header>	
+		 <nav class="main-menu menu-transparent menu-fixed animated fadeInDown">
 		        <div class="container">
 		          <!-- Brand and toggle get grouped for better mobile display -->
 			          <div class="navbar-header">
@@ -70,6 +70,19 @@ endif;
  <?php if(!is_front_page()) : ?>
     <section class="page-header" <?php if (!empty($breadcrumbs['url'])): echo 'style="background-image:url('.esc_url($breadcrumbs['url']).')"'; endif; ?>>
       <div class="container">
+      <h3 class="page-title"><?php
+                        if( is_archive()  ) {
+                            the_archive_title();
+                        } else if (is_home()) {
+                            wp_title('');
+                        } else if(is_page()) {
+                            the_title();
+                        } else if(is_search()) {
+                            printf( esc_html__( 'Search Results for: %s', 'body-builder' ), '<span>' . get_search_query() . '</span>' );
+                        } else {
+                            the_title();
+                        }                             
+                    ?></h3>
         <?php body_builder_breadcrumbs() ?>
       </div><!-- container -->
     </section><!-- page-header -->

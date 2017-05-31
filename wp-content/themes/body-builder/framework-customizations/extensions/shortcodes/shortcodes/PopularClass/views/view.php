@@ -1,11 +1,11 @@
 <?php 
 if (!defined('FW')) die('Forbidden');
 
-
+if(defined('FW')):
 $section_title = $atts['section_title'];
 $post_limit = $atts['post_limit'];
 $extraclass = $atts['extra_body_class'];
-
+endif;
 
 
 ?>
@@ -34,7 +34,7 @@ $extraclass = $atts['extra_body_class'];
               </div><!-- image -->
               <div class="content">
                 <h3><a href="<?php esc_url(the_permalink()); ?>"><?php the_title(); ?></a></h3>
-                <span><?php echo $class_time  = fw_get_db_post_option(get_the_ID(), 'class_time'); ?></span>
+                <span><?php echo esc_html($class_time  = fw_get_db_post_option(get_the_ID(), 'class_time')); ?></span>
               </div><!-- content -->
             </div><!-- class-item swiper-slide -->
             <?php endwhile; ?>

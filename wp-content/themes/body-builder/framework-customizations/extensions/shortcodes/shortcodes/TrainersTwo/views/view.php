@@ -1,7 +1,7 @@
 <?php 
 if (!defined('FW')) die('Forbidden');
 
-
+if(defined('FW')):
 $section_title = $atts['section_title'];
 
 $trainer_facebook =$atts['trainer_facebook'];
@@ -12,7 +12,7 @@ $see_more = $atts['see_more'];
 $post_limit = $atts['post_limit'];
 
 $extraclass = $atts['extra_body_class'];
-
+endif;
 
 ?>
 
@@ -54,14 +54,14 @@ $extraclass = $atts['extra_body_class'];
         </div><!-- trainer image -->
         <div class="trainer-details">
           <h4><a href="<?php esc_url(the_permalink());?>"><?php the_title(); ?></a></h4>
-          <p><?php echo $trainer_designation  = fw_get_db_post_option(get_the_ID(), 'trainer_designation'); ?></p>
+          <p><?php echo esc_html($trainer_designation  = fw_get_db_post_option(get_the_ID(), 'trainer_designation')); ?></p>
         </div><!-- trainer-details -->
       </div><!-- trainer-item -->
       
       <?php endwhile; ?>
     </div><!-- trainer-items -->
     <div class="trainers-button">
-      <a href="#" class="default-button hover-effect-two">See More</a>
+      <a href="<?php esc_url($see_more);  ?>" class="default-button hover-effect-two"><?php esc_html__('See More','body-builder');?></a>
     </div><!-- trainers-button -->
   </div><!-- container -->
 </div><!-- overlay -->

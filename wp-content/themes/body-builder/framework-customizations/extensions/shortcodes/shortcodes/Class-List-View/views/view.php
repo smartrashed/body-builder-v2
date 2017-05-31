@@ -1,10 +1,13 @@
 <?php 
 if (!defined('FW')) die('Forbidden');
 
+$section_title = '';
+$extraclass = '';
 
+if(defined('FW')):
 $section_title = $atts['section_title'];
 $extraclass = $atts['extra_body_class'];
-
+endif;
 ?>
 
 <!--Class Grid start here -->
@@ -31,7 +34,7 @@ $extraclass = $atts['extra_body_class'];
             <div class="content">
               <h3><a href="<?php esc_url(the_permalink()); ?>"><?php the_title(); ?></a></h3>
               <?php $class_time  = fw_get_db_post_option(get_the_ID(), 'class_time'); ?>
-              <span><?php  echo $class_time; ?></span>
+              <span><?php  echo esc_html($class_time); ?></span>
               <p><?php echo wp_trim_words( get_the_content(), 10, false ); ?></p>
             </div><!-- content -->
           </div><!-- class-item -->

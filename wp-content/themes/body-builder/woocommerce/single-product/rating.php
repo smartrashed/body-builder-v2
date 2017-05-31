@@ -38,7 +38,7 @@ if ( $rating_count > 0 ) : ?>
 				<?php
 				/* translators: 1: average rating 2: max rating (i.e. 5) */
 				printf(
-					__( '%1$s out of %2$s', 'woocommerce' ),
+					__( '%1$s out of %2$s', 'body-builder' ),
 					'<strong class="rating">' . esc_html( $average ) . '</strong>',
 					'<span>5</span>'
 				);
@@ -46,13 +46,13 @@ if ( $rating_count > 0 ) : ?>
 				<?php
 				/* translators: %s: rating count */
 				printf(
-					_n( 'based on %s customer rating', 'based on %s customer ratings', $rating_count, 'woocommerce' ),
+					_n( 'based on %s customer rating', 'based on %s customer ratings', $rating_count, 'body-builder' ),
 					'<span class="rating">' . esc_html( $rating_count ) . '</span>'
 				);
 				?>
 			</span>
 		</div>
-		<?php if ( comments_open() ) : ?><a href="#reviews" class="woocommerce-review-link" rel="nofollow">(<?php printf( _n( '%s customer review', '%s customer reviews', $review_count, 'woocommerce' ), '<span class="count">' . esc_html( $review_count ) . '</span>' ); ?>)</a><?php endif ?>
+		<?php if ( comments_open() ) : ?><a href="#reviews" class="woocommerce-review-link" rel="nofollow">(<?php printf( _n( '%s customer review', '%s customer reviews', $review_count, 'body-builder' ), '<span class="count">' . esc_html( $review_count ) . '</span>' ); ?>)</a><?php endif ?>
 	</div>
 
 <?php endif; ?>

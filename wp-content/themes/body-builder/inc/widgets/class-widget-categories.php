@@ -20,7 +20,7 @@ class Widget_Categories extends WP_Widget {
         parent::__construct(
             'event_hub_categories',     // Base ID
             esc_html__( 'Body Builder:: Categories', 'body-builder' ),    // Name
-            array( 'description' => __( 'Categories widget to display post categories' ) )
+            array( 'description' => __( 'Categories widget to display post categories','body-builder' ) )
         );
     }
 
@@ -77,19 +77,19 @@ class Widget_Categories extends WP_Widget {
         $parent = isset( $instance['parent'] ) ? (bool) $instance['parent'] : false;
         ?>
     
-    <p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e( 'Title:' ,'tfuse'); ?></label>
+    <p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e( 'Title:' ,'body-builder'); ?></label>
         <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" /></p>
 
     <p><input type="checkbox" class="checkbox" id="<?php echo $this->get_field_id('dropdown'); ?>" name="<?php echo $this->get_field_name('dropdown'); ?>"<?php checked( $dropdown ); ?> />
-        <label for="<?php echo $this->get_field_id('dropdown'); ?>"><?php _e( 'Show as dropdown','tfuse' ); ?></label><br />
+        <label for="<?php echo $this->get_field_id('dropdown'); ?>"><?php _e( 'Show as dropdown','body-builder' ); ?></label><br />
         <input type="checkbox" class="checkbox" id="<?php echo $this->get_field_id('hierarchical'); ?>" name="<?php echo $this->get_field_name('hierarchical'); ?>"<?php checked( $hierarchical ); ?> />
-        <label for="<?php echo $this->get_field_id('hierarchical'); ?>"><?php _e( 'Show hierarchy','tfuse' ); ?></label><br />
+        <label for="<?php echo $this->get_field_id('hierarchical'); ?>"><?php _e( 'Show hierarchy','body-builder' ); ?></label><br />
 
         <input type="checkbox" class="checkbox" id="<?php echo $this->get_field_id('hide_empty'); ?>" name="<?php echo $this->get_field_name('hide_empty'); ?>"<?php checked( $hide_empty ); ?> />
-        <label for="<?php echo $this->get_field_id('hide_empty'); ?>"><?php _e( 'Show empty categories','tfuse' ); ?></label><br />
+        <label for="<?php echo $this->get_field_id('hide_empty'); ?>"><?php _e( 'Show empty categories','body-builder' ); ?></label><br />
 
         <input type="checkbox" class="checkbox" id="<?php echo $this->get_field_id('parent'); ?>" name="<?php echo $this->get_field_name('parent'); ?>"<?php checked( $parent ); ?> />
-        <label for="<?php echo $this->get_field_id('parent'); ?>"><?php _e( 'Show as subcategories menu','tfuse' ); ?></label></p>
+        <label for="<?php echo $this->get_field_id('parent'); ?>"><?php _e( 'Show as subcategories menu','body-builder' ); ?></label></p>
 
     <?php
     }

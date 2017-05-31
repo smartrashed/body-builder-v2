@@ -1,6 +1,26 @@
  <?php
 if (!defined('FW')) die('Forbidden');
 
+$title  = '';
+$subtitle  = '';
+
+/*Banner Left Data Showing */
+$banner_left_image  ='';
+$schedule_title  = '';
+$fullday_office  = '';
+$half_day_office  = '';
+$close_day_office  = '';
+
+/*Banner Right Data Showing */
+$banner_right_image  = '';
+$right_title  = '';
+$right_side_link  = '';
+$sub_title = '';
+$sub_title_link = '';
+
+$extraclass = '';
+
+if(defined('FW')):
 $title  = $atts['banner_title'];
 $subtitle  = $atts['banner_sub_title'];
 
@@ -19,7 +39,7 @@ $sub_title = $atts['sub_title'];
 $sub_title_link = $atts['sub_title_link'];
 
 $extraclass = $atts['extra_body_class'];
-
+endif;
  ?>
 <!--Banner start here -->
 <div class="banner <?php echo esc_attr($extraclass) ?>">

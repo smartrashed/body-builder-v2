@@ -1,11 +1,11 @@
 div<?php 
 if (!defined('FW')) die('Forbidden');
 
-
+if(defined('FW')):
 $section_title = $atts['section_title'];
 $gallery_items = $atts['gallery'];
 $extraclass = $atts['extra_body_class'];
-
+endif;
 
 ?>
 <!--Gallery start here -->
@@ -30,7 +30,7 @@ $extraclass = $atts['extra_body_class'];
                 <a href="<?php echo esc_url($gallery['url']); ?>" class="gvideo-icon" data-rel="lightcase"><img src="<?php echo esc_url($gallery['thumb_icon']['url']); ?>" alt="video icon" class="img-reaponsive"></a>
                 </div>
                 <?php if(!empty($gallery['title'])): ?>
-                <p><?php echo esc_html__($gallery['title'], 'body-builder'); ?></p>
+                <p><?php echo esc_html($gallery['title']); ?></p>
                 <?php endif; ?>
               </div><!-- gallery-item -->
           </div>

@@ -13,12 +13,6 @@
  */
 
 
-$blog_style = fw_get_db_settings_option('blog_style');
-
-
-
-
-
 get_header(); ?>
 
 	<section <?php post_class('blog-large-image padding-130') ?> >
@@ -46,24 +40,8 @@ get_header(); ?>
 									 * If you want to override this in a child theme, then include a file
 									 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 									 */
-								?>	
-								<div class="news-item">
-							    <div class="image">
-							      <?php
-							      if( has_post_thumbnail() ) :
-							        the_post_thumbnail('body-builder-blog-full-single');
-							      endif; ?>
-							    </div><!-- image -->
-							    <div class="content">
-							      <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-							      <ul class="post-meta">
-							        <?php body_builder_posted_on(); ?>
-							      </ul>
-							      <p><?php echo wp_trim_words( get_the_content(), 15, false ); ?></p>
-							      <a href="<?php the_permalink();?>" class="default-button"><?php echo  esc_html__('Read More','body-builder'); ?></a>
-							    </div><!-- content -->
-							</div><!-- post item -->
-								<?php
+								get_template_part( 'template-parts/content', 'blog-large' );
+
 								endwhile;
 
 								body_builder_numeric_pagination(); 

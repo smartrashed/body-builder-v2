@@ -25,15 +25,15 @@ if ( post_password_required() ) {
 	<?php
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) : ?>
-		<h3>
+		
 			<?php
 				printf( // WPCS: XSS OK.
-					esc_html( _nx( '%2$s', '%1$s  %2$s ', get_comments_number(), 'body-builder' ) ),
+					esc_html( _nx( '%1$s Comment', '%1$s Comments', get_comments_number(), 'comments title', 'body-builder' ) ),
 					number_format_i18n( get_comments_number() ),
-					'<h3>' . esc_html__('Comment','body-builder' ) . '</h3>'
+					'<h1>' . get_the_title() . '</h1>'
 				);
 			?>
-		</h3><!-- .comments-title -->
+		<!-- .comments-title -->
 
 		<ul>
 			<?php
