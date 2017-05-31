@@ -1,8 +1,13 @@
 <?php
-//if (!defined( 'FW' )) die('Forbidden');
+if (!defined( 'FW' )) die('Forbidden');
+
+
+$body_logo = '';
+$breadcrumbs = '';
+if (defined('FW')):
 $body_logo = fw_get_db_settings_option('logo');
 $breadcrumbs = fw_get_db_settings_option('breadcrumbs');
-
+endif;
 
 
 /**

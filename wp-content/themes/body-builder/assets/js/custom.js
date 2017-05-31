@@ -171,11 +171,6 @@ $(window).on('load', function() {
 
 
 
-
-    
-
-
-
 });
 
 

@@ -1195,7 +1195,7 @@ outline: none;
 .single-post .content{
 	padding: 0!important;
 }
-.post-item{
+.sidebar-item .post-item{
 	margin-bottom: 5px !important;
 }
 
