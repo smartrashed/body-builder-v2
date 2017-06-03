@@ -26,8 +26,12 @@ endif;
 
               ));
 
+
              ?>
-              <?php while($product_query->have_posts()) : $product_query->the_post(); ?>
+              <?php while($product_query->have_posts()) : $product_query->the_post(); 
+                global $woocommerce;
+                $currency = get_woocommerce_currency_symbol();
+                $price = get_post_meta( get_the_ID(), '_regular_price', true); ?>
               <div class="swiper-slide">
                 <div class="product-item">
                   <div class="image">
@@ -35,7 +39,7 @@ endif;
                   </div><!-- image -->
                   <div class="content">
                     <?php the_title('<h4>','</h4>'); ?>
-                    <span><?php echo esc_html($price); ?></span>
+                    <span><?php echo esc_html($currency); ?><?php echo esc_html($price); ?></span>
                   </div><!-- content -->
                 </div><!-- product-item -->
               </div><!-- swiper-slide -->

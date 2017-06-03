@@ -13,8 +13,22 @@
 
 
 if (defined('FW')):
+
+$is_page_breadcrumbs = fw_get_db_post_option(get_the_ID(), 'is_breadcrumbs')
+$breadcrumbs = 1;
 $body_logo = fw_get_db_settings_option('logo');
-$breadcrumbs = fw_get_db_settings_option('breadcrumbs');
+
+
+ if (is_page() && $is_breadcrumbs == '1'):
+		if( $breadcrumbs == '1' ) :
+			$breadcrumbs  = fw_get_db_post_option(get_the_ID(), 'page_breadcrumbs');
+	    else :
+	       $breadcrumbs = fw_get_db_settings_option('default_breadcrumbs');    
+	    endif;
+ endif;
+
+    
+
 endif;
 
 
@@ -67,8 +81,8 @@ endif;
  <!--Page Header start here -->
 
 
- <?php if(!is_front_page()) : ?>
-    <section class="page-header" <?php if (!empty($breadcrumbs['url'])): echo 'style="background-image:url('.esc_url($breadcrumbs['url']).')"'; endif; ?>>
+ <?php if (!is_front_page() && $breadcrumbs == '1' && !is_404()): ?>
+    <section class="page-header" <?php if (!empty($breadcrumbs_image['url'])): echo 'style="background-image:url('.esc_url($breadcrumbs['url']).')"'; endif; ?>>
       <div class="container">
       <h3 class="page-title"><?php
                         if( is_archive()  ) {

@@ -23,7 +23,8 @@ endif;
           $recent_post = new WP_Query(array(
               'post_type' => 'post',
               'order'     => 'decending',
-              'posts_per_page' => $post_limit
+              'posts_per_page' => $post_limit,
+              'ignore_sticky_posts' => true
 
             ));
          while($recent_post->have_posts()): $recent_post->the_post()  ?>

@@ -221,11 +221,10 @@ h4,
 h5,
 h6 {
     clear: both;
-    font-family: 'Poppins', sans-serif;
-    margin: 20px 0;
-    padding: 0;
-    line-height: 1.1;
     font-weight: 700;
+    color: #0d1218;
+    margin: 0;
+    padding: 0;
 }
 h2{
 	font-size: 56px;
@@ -645,8 +644,8 @@ input[type="submit"][disabled]:focus {
 .main-menu .navbar-brand{
     padding: 0;
 }
-.main-menu .navbar-brand h1{
-    line-height: 15px;
+header .main-menu .navbar-brand h1{
+    line-height: 60px;
 }
 .main-menu .menu-bar{
     margin: 0;
@@ -911,13 +910,21 @@ input[type="submit"][disabled]:focus {
     background-color: #fff;
     color: #171717;
 }
+.back:hover{
+    background-color: #fff !important;
+    color: #171717 !important;
+}
+.back:focus{
+    background-color: #fff;
+    color: #171717;
+}
 
 /*  04  - Page Header
 ----------------------------------------------*/
 .page-header{
     background-size: cover;
     background-position: 50% 50%;
-    margin: 70px auto;
+    margin: 0;
     padding: 75px 0px;
     border: none;
     background: #f7f7f7
@@ -928,7 +935,7 @@ input[type="submit"][disabled]:focus {
     font-weight: 300;
     text-transform: uppercase;
     color: #171717;
-    margin-bottom: 10px;
+    
 }
 .page-header ul{
     margin: 0;
@@ -1008,7 +1015,7 @@ input[type="submit"][disabled]:focus {
 }
 .gallery .gallery-top .content{
     background-color: #fccf3e;
-    padding: 100px;
+    padding: 30px;
 }
 .gallery .gallery-top .content h2{
     font-size: 48px;
@@ -1051,7 +1058,6 @@ input[type="submit"][disabled]:focus {
     width: 33.33%;
     float: left;
     border: 6px solid #fff;
-    height: 412px;
 }
 .gallery .gallery-bottom .gallery-item img{
     width: 100%;
@@ -1075,7 +1081,6 @@ input[type="submit"][disabled]:focus {
     top: 0;
     left: 0;
     font-size: 48px;
-    line-height: 400px;
     color: #fff;
     font-weight: 700;
     text-transform: uppercase;
@@ -1189,6 +1194,7 @@ input[type="submit"][disabled]:focus {
     -webkit-transform: translateY(-50%) translateX(-50%);
     transform: translateY(-50%) translateX(-50%);
     opacity: 0;
+    line-height: 15px;
 }
 .gallery-images .image-icon img{
     -webkit-transform: scale(0);
@@ -2928,7 +2934,7 @@ input[type="submit"][disabled]:focus {
     padding: 4px 13px;
 }
 .pagination ul li:first-child a, .pagination ul li:last-child a{
-    padding: 4px 20px;
+    /*padding: 4px 20px;*/
 }
 .pagination ul li a:hover{
     background-color: #fccf3e;
@@ -2937,10 +2943,15 @@ input[type="submit"][disabled]:focus {
 }
 .pagination span{
     float: right;
+    display: block;
     font-size: 15px;
-    line-height: 36px;
     font-weight: 700;
-    color: #55575d;
+    background: #fccf3e;
+    color:#000;
+    text-decoration: none;
+    border: 1px solid #e4e7e9;
+    border-radius: 3px;
+    padding: 4px 13px;
 }
 .single-post{
     /*single code*/

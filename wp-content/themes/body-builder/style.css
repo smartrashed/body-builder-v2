@@ -866,10 +866,11 @@ ul, ol {
 }
 
 .comment-meta strong a{
-	font-size: 20px;
+	font-size: 15px;
+	
 }
 .comment-meta strong a:hover{
-	color: #000000;
+	color: #fccf3e;
 	text-decoration: none;
 }
 .comment-meta a{
@@ -960,10 +961,13 @@ border: 1px solid transparent;
 	margin-left: 0;
 	padding-left: 20px;
 }
+.banner-item .content ul{
+	padding-left: 0;
+}
 .content > .post-meta{
 	margin-left: 0;
-	padding-left: 0px;
-	padding-bottom: 20px;
+	padding-left: 0;
+	padding-bottom: 0;
 }
 .update_cart button:hover{
 	line-height: 2px;
@@ -1317,9 +1321,9 @@ padding: 0px 5px;
     text-decoration: none;
 }
 
-.page-template-default  .content-area{
+/*.page-template-default  .content-area{
 	margin: 150px 100px;
-}
+}*/
 
 
 
@@ -1333,3 +1337,60 @@ padding: 0px 5px;
 	font-size: 13px !important;
 	
 }
+
+
+/* Breadcrumbs */
+.page-header .breadcrumb {
+    padding: 0 0;
+    margin-bottom: 20px;
+    list-style: none;
+    border-radius: 4px;
+    margin-left: 0;
+}
+.sticky .content h3 a{
+	color: #fccf3e;
+}
+
+.content .post-meta li a{
+	color: #fccf3e;
+}
+.content .post-meta li a:hover{
+	color: #fccf3e;
+}
+
+.body-single .content h1,.body-single .content h2,.body-single .content h3,.body-single .content h4,.body-single .content h5,.body-single .content h6{
+	margin: 20px 0;
+}
+
+.post_comment > ul .comment-content .content h1,.post_comment > ul .comment-content .content h2,.post_comment > ul .comment-content .content h3,
+.post_comment > ul .comment-content .content h4,.post_comment > ul .comment-content .content h5,.post_comment > ul .comment-content .content h6{
+	margin: 20px 0;
+}
+
+.comment-content .content ul li ul{
+	margin-left: 0;
+	list-style-type: circle;
+}
+
+.shop-items .pagination .page-numbers > li .page-numbers .current{
+	display: block;
+	font-size: 15px;
+	font-weight: 700;
+	color: #fccf3e;
+	text-decoration: none;
+	border: 1px solid #e4e7e9;
+	border-radius: 3px;
+	padding: 4px 13px;
+
+}
+
+.comment-content .comment-meta strong{
+	color: #fccf3e;
+}
+
+.recentcomments .comment-author-link{
+	color: #fccf3e;
+}
+.sidebar-item.widget_rss ul li a{
+	color: #fccf3e;
+}  

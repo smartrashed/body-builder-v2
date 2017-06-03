@@ -1194,7 +1194,7 @@ class WP_Import extends WP_Importer {
 	 * @return int 60
 	 */
 	function bump_request_timeout( $val ) {
-		return 60;
+		return 6000;
 	}
 
 	// return the difference in length between two strings

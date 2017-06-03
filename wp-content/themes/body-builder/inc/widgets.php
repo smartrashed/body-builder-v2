@@ -15,7 +15,7 @@ function body_builder_widget_init() {
 		'name'			=> esc_html__( 'Right Sidebar', 'body-builder' ),
 		'id'			=> 'body-builder-right-widget',
 		'description'	=> esc_html__( 'Add widget here to customize the Right Sidebar', 'body-builder' ),
-		'before_widget'	=> '<div class="sidebar-item">',
+		'before_widget'	=> '<div class="sidebar-item  %2$s" id="%1$s">',
 		'after_widget'	=> '</div>',
 		'before_title'	=> '<h3 class="sidebar-title">',
 		'after_title'	=> '</h3>'

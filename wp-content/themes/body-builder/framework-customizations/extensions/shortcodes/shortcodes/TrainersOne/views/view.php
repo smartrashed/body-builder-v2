@@ -1,13 +1,15 @@
 <?php 
 if (!defined('FW')) die('Forbidden');
 
+
+if(defined('FW')):
 $section_title = $atts['section_title'];
 
 /*Social Link Info*/
 
 $extraclass = $atts['extra_body_class'];
 $post_limit = $atts['post_limit'];
-
+endif;
 ?>
 
  <!--Trainers start here -->
@@ -31,7 +33,7 @@ $post_limit = $atts['post_limit'];
                            $trainer_facebook  = fw_get_db_post_option(get_the_ID(),'trainer_facebook');
                            $trainer_linkedin  = fw_get_db_post_option(get_the_ID(),'trainer_linkedin'); 
                     
-                   ?>
+                      ?>
                     <div class="trainer-item swiper-slide">
                           <div class="trainer-image">
                             <?php   if( has_post_thumbnail() ) : ?>

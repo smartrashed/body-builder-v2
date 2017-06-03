@@ -25,7 +25,7 @@ endif;
           <p><?php echo esc_html($subtitle); ?></p>
          <?php endif; ?>
          <?php if(!empty($readmore_link)): ?>
-          <a href="<?php echo esc_url(); ?>" class="default-button hover-effect-two"><?php echo esc_html($readmore_link); ?></a>
+          <a href="<?php echo esc_url($readmore_link); ?>" class="default-button back hover-effect-two"><?php echo esc_html($readmore_link); ?></a>
           <?php endif; ?>
         </div>
       </div><!-- container -->

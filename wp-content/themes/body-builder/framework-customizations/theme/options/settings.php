@@ -8,7 +8,7 @@ $options = array(
 		    'type' => 'tab',
 		    'options' => array(
 		        'logo'  => array( 'type' => 'upload','label'=>'Logo' ),
-		        'breadcrumbs'  => array( 'type' => 'upload','label'=>'Breadcrumbs' ),
+		        'breadcrumb_image'  => array( 'type' => 'upload','label'=>'Breadcrumbs' ),
 		        'default_breadcrumbs'  => array( 
 		        	'type' => 'switch',
 		        	'label'=>'Default Vreadcrumbs',
@@ -20,6 +20,7 @@ $options = array(
 				        'value' => '0',
 				        'label' => esc_html__('No', 'body-builder'),
 				    ),
+				    
 
 		        ),
 		    ),

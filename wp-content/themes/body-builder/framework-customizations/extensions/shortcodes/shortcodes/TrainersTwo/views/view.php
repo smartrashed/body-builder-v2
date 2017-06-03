@@ -1,12 +1,9 @@
 <?php 
 if (!defined('FW')) die('Forbidden');
 
+
 if(defined('FW')):
 $section_title = $atts['section_title'];
-
-$trainer_facebook =$atts['trainer_facebook'];
-$trainer_twitter =$atts['trainer_twitter'];
-$trainer_linkedin =$atts['trainer_linkedin'];
 
 $see_more = $atts['see_more'];
 $post_limit = $atts['post_limit'];
@@ -31,7 +28,13 @@ endif;
          'posts_per_page' => $post_limit
       
         )); 
-         while($trainer_info->have_posts()): $trainer_info->the_post(); ?>
+         while($trainer_info->have_posts()): $trainer_info->the_post(); 
+
+          $trainer_twitter  = fw_get_db_post_option(get_the_ID(),'trainer_twitter'); 
+          $trainer_facebook  = fw_get_db_post_option(get_the_ID(),'trainer_facebook');
+          $trainer_linkedin  = fw_get_db_post_option(get_the_ID(),'trainer_linkedin'); 
+                           ?>
+
       <div class="trainer-item">
         <div class="trainer-image">
             <?php if(has_post_thumbnail()): ?>
@@ -40,15 +43,18 @@ endif;
           <div class="overlay"></div>
 
               <div class="trainer-social">
-                <?php if(!empty($trainer_twitter)) :
-                  echo '<a href="'.$trainer_twitter  = fw_get_db_post_option(get_the_ID(), 'trainer_twitter').'"><i class="fa fa-twitter" aria-hidden="true"></i></a>';
-                endif;?>
-                 <?php if(!empty($trainer_facebook)) :?>
-                <a href="<?php echo esc_url($trainer_facebook); ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <?php endif; ?>
-                <?php if(!empty($trainer_linkedin)) :?>
-                <a href="<?php echo esc_url($trainer_linkedin); ?>"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                <?php endif;?>
+                 <div class="trainer-social">
+                              <?php if($trainer_twitter ): ?>
+                                <a href="<?php echo esc_url($trainer_twitter); ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                              <?php endif; ?> 
+                              <?php if($trainer_facebook ): ?> 
+                                <a href="<?php echo esc_url($trainer_facebook); ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <?php endif; ?> 
+                                <?php if($trainer_linkedin ): ?>
+                                <a href="<?php echo esc_url($trainer_linkedin); ?>"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                <?php endif; ?> 
+                               
+                              </div>
               </div>
 
         </div><!-- trainer image -->
@@ -61,7 +67,7 @@ endif;
       <?php endwhile; ?>
     </div><!-- trainer-items -->
     <div class="trainers-button">
-      <a href="<?php esc_url($see_more);  ?>" class="default-button hover-effect-two"><?php esc_html__('See More','body-builder');?></a>
+      <a href="<?php esc_url($see_more);  ?>" class="default-button hover-effect-two"><?php echo esc_html__('See More','body-builder');?></a>
     </div><!-- trainers-button -->
   </div><!-- container -->
 </div><!-- overlay -->

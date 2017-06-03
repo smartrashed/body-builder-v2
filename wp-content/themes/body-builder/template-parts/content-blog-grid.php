@@ -13,7 +13,7 @@
  */
 ?>
 
-<div class="col-md-6 col-sm-6 col-xs-12">
+<div <?php post_class('col-md-6 col-sm-6 col-xs-12'); ?>>
     <div class="news-item">
         <div class="image">
           <?php

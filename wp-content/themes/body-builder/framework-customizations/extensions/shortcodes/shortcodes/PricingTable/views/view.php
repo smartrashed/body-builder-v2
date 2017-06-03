@@ -33,7 +33,7 @@ endif;
             <p><?php echo esc_html($fitness_tutorials  = fw_get_db_post_option(get_the_ID(), 'fitness_tutorials')); ?></p>
             <p><?php echo esc_html($attend_compitions  = fw_get_db_post_option(get_the_ID(), 'attend_compitions')); ?></p>
            
-            <a href="<?php the_permalink(); ?>"><?php esc_heml__('Join Now','body-builder') ?></a>
+            <a href="<?php the_permalink(); ?>"><?php echo esc_html__('Join Now','body-builder'); ?></a>
           </div><!-- pricing-item -->
           
         </div>

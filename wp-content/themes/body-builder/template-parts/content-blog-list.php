@@ -12,7 +12,7 @@
  * @package body-builder
  */
 ?>
-<div class="post-item">
+<div <?php post_class('post-item'); ?>>
     <div class="image">
       <?php
       if( has_post_thumbnail() ) :

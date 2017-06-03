@@ -13,7 +13,8 @@ endif;
 
       <?php $blog_post = new WP_Query(array(
         'post_type' => 'post',
-        'posts_per_page' => $post_limit
+        'posts_per_page' => $post_limit,
+        'ignore_sticky_posts' => true
 
       )); ?>
 
@@ -22,7 +23,7 @@ endif;
       <div class="gallery-top">
         <div class="image">
           <?php   if( has_post_thumbnail() ) : ?> 
-          <a href="<?php esc_url(the_permalink()); ?>"><?php the_post_thumbnail(); ?></a>
+          <a href="<?php esc_url(the_permalink()); ?>"><?php the_post_thumbnail('body-builder-about'); ?></a>
           <?php endif; ?>
         </div>
         <div class="content">

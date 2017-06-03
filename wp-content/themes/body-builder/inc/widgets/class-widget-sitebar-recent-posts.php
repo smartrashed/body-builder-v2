@@ -28,7 +28,8 @@ class Body_Builder_sidebar_Recent_Posts extends WP_Widget {
 
 		$recent_posts = new WP_Query( array(
 			'posts_type'		=> 'post',
-			'posts_per_page'	=> $instance['number']
+			'posts_per_page'	=> $instance['number'],
+			'ignore_sticky_posts' => true
 		) );
 		if( $recent_posts->have_posts() ) : ?>
 
