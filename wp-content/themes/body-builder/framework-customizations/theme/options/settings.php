@@ -8,21 +8,36 @@ $options = array(
 		    'type' => 'tab',
 		    'options' => array(
 		        'logo'  => array( 'type' => 'upload','label'=>'Logo' ),
-		        'breadcrumb_image'  => array( 'type' => 'upload','label'=>'Breadcrumbs' ),
-		        'default_breadcrumbs'  => array( 
-		        	'type' => 'switch',
-		        	'label'=>'Default Vreadcrumbs',
-		        	'left-choice' => array(
-				        'value' => '1',
-				        'label' => esc_html__('Yes', 'body-builder'),
-				    ),
-				    'right-choice' => array(
-				        'value' => '0',
-				        'label' => esc_html__('No', 'body-builder'),
-				    ),
-				    
-
-		        ),
+			        'default_breadcrumbs' => array(
+	                        'type' => 'multi-picker',
+	                        'label' => false,
+	                        'desc' => false,
+	                        'picker' => array(
+	                            'enable' => array(
+	                                'label' => esc_html__('Header breadcrumb', 'body-builder'),
+	                                 'desc'         => esc_html__('Choose Enable if you want to custom Page Breadcrumbs for this page only.', 'body-builder'),
+	                                'help'          => esc_html__('Selcet for individual page breadcrumbs', 'body-builder'),
+	                                'type' => 'switch',
+	                                'right-choice' => array(
+	                                    'value' => 'yes',
+	                                    'label' => esc_html__('Enable', 'body-builder'),
+	                                ),
+	                                'left-choice' => array(
+	                                    'value' => 'no',
+	                                    'label' => esc_html__('Disable', 'body-builder')
+	                                )
+	                            )
+	                        ),
+			                'choices' => array(
+			                    'yes' => array(
+			                        'breadcrumb_image' => array(
+			                            'label' => esc_html__('Breadcrumbs Image', 'body-builder'),
+			                            'type' => 'upload',
+			                            'desc'  => esc_html__('Upload Your Breadcrumbs image', 'body-builder')
+			                        )
+			                    )
+			                ),
+            )
 		    ),
 		    'title' => esc_html__('Header Settings', 'body-builder'),
 			),

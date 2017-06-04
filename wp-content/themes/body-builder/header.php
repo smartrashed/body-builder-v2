@@ -12,22 +12,31 @@
 
 
 
+
+
+
 if (defined('FW')):
 
-$is_page_breadcrumbs = fw_get_db_post_option(get_the_ID(), 'is_breadcrumbs')
-$breadcrumbs = 1;
+$default_breadcrumbs = fw_get_db_settings_option('default_breadcrumbs'); 
+$page_breadcrumbs  = fw_get_db_post_option(get_the_ID(),'page_breadcrumbs'); 
+
+
+
+if($page_breadcrumbs['enable'] == 'yes' ):
+	if($page_breadcrumbs['yes']['header_breadcrumb']=='yes') :
+		$breadcrumbs = $page_breadcrumbs;
+	else:
+		$breadcrumbs = $default_breadcrumbs;
+	endif;
+else :
+		$breadcrumbs = $page_breadcrumbs;
+endif;
+
+
+
 $body_logo = fw_get_db_settings_option('logo');
 
-
- if (is_page() && $is_breadcrumbs == '1'):
-		if( $breadcrumbs == '1' ) :
-			$breadcrumbs  = fw_get_db_post_option(get_the_ID(), 'page_breadcrumbs');
-	    else :
-	       $breadcrumbs = fw_get_db_settings_option('default_breadcrumbs');    
-	    endif;
- endif;
-
-    
+		
 
 endif;
 
@@ -45,7 +54,7 @@ endif;
 
 <body <?php body_class(); ?>>
 	<header>	
-		 <nav class="main-menu menu-transparent menu-fixed animated fadeInDown">
+		 <nav class="main-menu">
 		        <div class="container">
 		          <!-- Brand and toggle get grouped for better mobile display -->
 			          <div class="navbar-header">
@@ -80,9 +89,8 @@ endif;
 	</header><!-- #masthead -->
  <!--Page Header start here -->
 
-
- <?php if (!is_front_page() && $breadcrumbs == '1' && !is_404()): ?>
-    <section class="page-header" <?php if (!empty($breadcrumbs_image['url'])): echo 'style="background-image:url('.esc_url($breadcrumbs['url']).')"'; endif; ?>>
+ <?php if (!is_front_page() && $breadcrumbs['enable'] == 'yes' && !is_404()): ?>
+    <section class="page-header" <?php if (!empty($breadcrumbs['yes']['breadcrumb_image']['url'])): echo 'style="background-image:url('.esc_url($breadcrumbs['yes']['breadcrumb_image']['url']).')"'; endif; ?>>
       <div class="container">
       <h3 class="page-title"><?php
                         if( is_archive()  ) {
