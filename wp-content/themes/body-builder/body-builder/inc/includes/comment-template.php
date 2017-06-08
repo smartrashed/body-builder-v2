@@ -79,12 +79,12 @@ function body_builder_comment_form() {
     );
     $comments_args = array(
         'fields' => $fields,
-        'title_reply'=> __( 'Leave a comment', 'body-builder' ),
+        'title_reply'=> __( 'Get In Touch', 'body-builder' ),
         'title_reply_before'    => '<h3>',
         'title_reply_after'     => '</h3>',
         'label_submit'  => __( 'Submit', 'body-builder' ),
         'comment_notes_before'  => '',
-        'comment_field' => '<textarea id="comment" class="comment_input_textarea" name="comment" cols="45" rows="6" placeholder="' . esc_html__( 'Your Comment', 'body-builder' ) . '" aria-required="true"></textarea>',
+        'comment_field' => '<textarea id="comment" class="comment_input_textarea" name="comment" cols="45" rows="6" placeholder="' . esc_html__( 'Your Messages', 'body-builder' ) . '" aria-required="true"></textarea>',
         'comment_notes_after' => '',
     );
     comment_form($comments_args);

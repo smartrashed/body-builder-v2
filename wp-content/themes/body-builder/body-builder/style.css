@@ -670,9 +670,9 @@ a:active {
 	display: block;
 }
 
-/*.hentry {
+.hentry {
 	margin: 0 0 1.5em;
-}*/
+}
 
 .byline,
 .updated:not(.published) {
@@ -684,11 +684,11 @@ a:active {
 	display: inline;
 }
 
-/*.page-content,
+.page-content,
 .entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
-}*/
+}
 
 .page-links {
 	clear: both;
@@ -882,6 +882,7 @@ ul, ol {
 	text-transform: capitalize;
 }
 .comment-meta a:hover{
+	color: #000000;
 	text-decoration: none;
 }
 
@@ -968,7 +969,6 @@ border: 1px solid transparent;
 	padding-left: 0;
 	padding-bottom: 0;
 }
-
 .update_cart button:hover{
 	line-height: 2px;
 	padding: 12px 37px;
@@ -1139,9 +1139,9 @@ outline: none;
 }
 
 /*Container Margin */
-/*.page-content, .entry-content, .entry-summary {
-    margin: 100px 100px;
-}*/
+.page-content, .entry-content, .entry-summary {
+    margin: 0 0 0 0;
+}
 
 /*Site title*/
 .site-title{
@@ -1305,7 +1305,6 @@ padding: 0px 5px;
 .comment-content> a:before{
 	content: " \f122";
     font-family: FontAwesome;
-    padding-right: 5px;
 }
 
 .post-password-form input[type="submit"]:hover{
@@ -1394,64 +1393,4 @@ padding: 0px 5px;
 }
 .sidebar-item.widget_rss ul li a{
 	color: #fccf3e;
-	font-weight: 700;
 }  
-.sidebar-item.widget_search  .search-field{
-	margin-top: -25px;
-}
-
-.post_comment .comment-respond h3{
-	padding-bottom: 15px;
-}
-
-.sidebar-item.widget_categories .postform{
-	padding: 10px 20px;
-}
-
-.content .post-meta li:first-child a{
-	color:#a3a8ab;
-}
-
-.sidebar-item.widget_archive #archives-dropdown--1{
-	padding: 10px 20px;
-}
-
-.no-results.not-found .page-content .search-field:focus{
-	border-color: #fccf3e;
-}
-.no-results.not-found .page-content .search-field{
-	width: 80%;
-}
-
-.page_wrap{
-	padding-top: 100px;
-	padding-bottom: 100px;
-}
-
-.entry-content h1,.entry-content h2,.entry-content h3,.entry-content h4,.entry-content h5,.entry-content h6{
-margin: 20px 0;
-clear: both;
-padding: 0;
-line-height: 1.1;
-font-weight: 700;
-}
-.entry-content h5{
-	font-size: 16px;
-}
-.entry-content h6{
-	font-size: 14px;
-}
-
-.body-single .content h5{
-	font-size: 16px;
-}
-.body-single .content h6{
-	font-size: 14px;
-}
-.post-meta p var{
-	font-size: 14px;
-}
-
-.breadcrumbs span{
-	font-size: 15px;
-}
