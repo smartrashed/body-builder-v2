@@ -26,7 +26,7 @@ function body_builder_posted_on() {
 
 	$posted_on = sprintf(
 		esc_html_x( '%s', 'post date', 'body-builder' ),
-		'<span>'. $time_string .'</span>'
+		'<a href="'.get_the_permalink().'">'. $time_string .'</a>'
 	);
 
 	$byline = sprintf(

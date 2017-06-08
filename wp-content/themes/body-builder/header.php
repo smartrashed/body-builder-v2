@@ -105,7 +105,7 @@ endif;
                             the_title();
                         }                             
                     ?></h3>
-        <?php body_builder_breadcrumbs() ?>
+        <?php echo fw_ext_get_breadcrumbs( ':' ) ?>
       </div><!-- container -->
     </section><!-- page-header -->
     <!--Page Header end here -->

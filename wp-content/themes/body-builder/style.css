@@ -1305,6 +1305,7 @@ padding: 0px 5px;
 .comment-content> a:before{
 	content: " \f122";
     font-family: FontAwesome;
+    padding-right: 5px;
 }
 
 .post-password-form input[type="submit"]:hover{
@@ -1393,4 +1394,22 @@ padding: 0px 5px;
 }
 .sidebar-item.widget_rss ul li a{
 	color: #fccf3e;
+	font-weight: bold;
 }  
+
+
+.sidebar-item.widget_archive select{
+	padding: 10px 20px;
+}
+
+.sidebar-item.widget_categories .postform{
+	padding: 10px 20px;
+}
+
+.breadcrumbs span{
+	font-size: 14px;
+}
+
+.section-padding{
+	padding: 80px 0;
+}

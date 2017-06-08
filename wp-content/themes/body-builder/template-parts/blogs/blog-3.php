@@ -1,6 +1,6 @@
 <?php
 /**
- * The archive  template file
+ * The main template file
  *
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
@@ -12,9 +12,10 @@
  * @package body-builder
  */
 
+
 get_header(); ?>
 
-	<section <?php post_class('blog-posts padding-130') ?> >
+	<section class="blog-large-image padding-130">
 		<div class="container">
 			<div class="row">
           		<div class="col-md-8 col-sm-12 col-xs-12">
@@ -25,7 +26,7 @@ get_header(); ?>
 
 								if ( is_home() && ! is_front_page() ) : ?>
 									<header>
-										<h1><?php single_post_title(); ?></h1>
+										<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 									</header>
 
 								<?php
@@ -39,23 +40,21 @@ get_header(); ?>
 									 * If you want to override this in a child theme, then include a file
 									 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 									 */
-									get_template_part( 'template-parts/content', 'blog-list' );
+								get_template_part( 'template-parts/content', 'blog-large' );
 
 								endwhile;
 
 								body_builder_numeric_pagination(); 
-
-
+						
 							else :
 
 								get_template_part( 'template-parts/content', 'none' );
 
-						endif; ?>
-						
+						endif; 			?>			
 					
 				</div>
 					
-					<?php get_sidebar(); ?>
+					<?php  get_sidebar(); ?>
 			</div>
 		</div><!-- #container -->
 	</section><!-- #section -->

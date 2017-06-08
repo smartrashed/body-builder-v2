@@ -52,51 +52,6 @@ function body_builder_social_share( $post_id ){ ?>
 <?php }
 
 
-/**
- * Event Hub related posts
- */
-function body_builder_related_posts( $post_id ) {
-    $related_posts = new WP_Query( array( 
-        'category__in'      => wp_get_post_categories( $post_id ),
-        'posts_per_page'    => 2,
-        'post__not_in'      => array( $post_id ) ) 
-    );
-
-    if( $related_posts->have_posts() ) : ?>
-
-        <div class="related-post">
-            <h3><?php esc_html_e( 'Related Post', 'body-builder' ); ?></h3>
-        
-            <?php 
-            while( $related_posts->have_posts() ) : $related_posts->the_post(); ?>
-
-                
-                    <div class="post-item">
-                            <div class="image">
-                              <?php
-                              if( has_post_thumbnail() ) :
-                                the_post_thumbnail('body-builder-blog-grid');
-                              endif; ?>
-                            </div><!-- image -->
-                            <div class="content">
-                              <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                              <ul class="post-meta">
-                                <?php body_builder_posted_on(); ?>
-                              </ul>
-                              <p><?php echo wp_trim_words( get_the_content(), 15, false ); ?></p>
-                              <a href="<?php the_permalink();?>" class="default-button"><?php echo  esc_html__('Read More','body-builder'); ?></a>
-                            </div><!-- content -->
-                        </div><!-- post item -->
-            <?php endwhile; ?>
-       
-        </div><!-- /.ccr-section related-post -->
-
-    <?php 
-        wp_reset_postdata();
-
-    endif;
-}
-
 
 
 /**

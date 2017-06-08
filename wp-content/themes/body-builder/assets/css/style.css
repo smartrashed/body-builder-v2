@@ -322,7 +322,8 @@ tt,
 var,
 samp,
 pre {
-    font-family: 'Roboto', sans-serif;
+    font-family: Inconsolata, monospace;
+    font-size: 12px;
 }
 pre {
     border: 1px solid #d1d1d1;

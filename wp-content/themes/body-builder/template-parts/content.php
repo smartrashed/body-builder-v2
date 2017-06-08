@@ -55,5 +55,3 @@
 		
 		</div>	<!-- .entry-content -->
 </div><!--end single -->
-	
-<?php body_builder_related_posts( $post->ID ); ?>
