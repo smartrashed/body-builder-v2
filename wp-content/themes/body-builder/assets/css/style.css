@@ -925,10 +925,13 @@ header .main-menu .navbar-brand h1{
 .page-header{
     background-size: cover;
     background-position: 50% 50%;
-    margin: 0;
+    margin: 0 0;
     padding: 75px 0px;
     border: none;
     background: #f7f7f7
+}
+.page-header h1{
+    padding: 0 25px;
 }
 .page-header h3{
     font-size: 36px;
@@ -1316,12 +1319,7 @@ header .main-menu .navbar-brand h1{
 .class-item:hover span{
     color: #171717;
 }
-.class-grid{
-    padding: 130px 0px;
-}
-.class-list{
-    padding: 130px 0px;
-}
+
 .class-list .class-item{
     border-radius: 0px;
 }
@@ -3385,3 +3383,5 @@ footer .footer-bottom p a:hover{
     color: #fccf3e;
     text-decoration: none;
 }
+
+

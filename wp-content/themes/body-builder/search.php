@@ -11,7 +11,7 @@ get_header(); ?>
 
 
 
-<section <?php post_class('blog-grid padding-130'); ?>>
+<section <?php post_class('blog-large-image padding-130'); ?>>
 		<div class="container">
 			<div class="row">
           		<div class="col-md-8 col-sm-12 col-xs-12">
@@ -19,7 +19,7 @@ get_header(); ?>
 		             
 						<?php
 							if ( have_posts() ) : ?>
-							<header class="page-header">
+							<header class="page-header-search">
 								<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'body-builder' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 							</header><!-- .page-header -->
 

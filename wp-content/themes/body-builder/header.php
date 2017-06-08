@@ -8,13 +8,6 @@
  *
  * @package body-builder
  */
-
-
-
-
-
-
-
 if (defined('FW')):
 
 $default_breadcrumbs = fw_get_db_settings_option('default_breadcrumbs'); 
