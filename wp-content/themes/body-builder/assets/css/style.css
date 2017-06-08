@@ -32,6 +32,7 @@ html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
 }
+
 body {
      font-family: 'Roboto', sans-serif;
      font-size: 15px; /*  base font size  15px= 1em*/
@@ -322,7 +323,8 @@ tt,
 var,
 samp,
 pre {
-    font-family: 'Roboto', sans-serif;
+    font-family: Inconsolata, monospace;
+    font-size: 12px;
 }
 pre {
     border: 1px solid #d1d1d1;
@@ -2994,6 +2996,7 @@ header .main-menu .navbar-brand h1{
 .single-post .content .bottom{
     overflow: hidden;
     margin-top: 50px;
+    margin-bottom: 20px;
 }
 .single-post .content .tags{
     margin: 0px;
@@ -3035,7 +3038,7 @@ header .main-menu .navbar-brand h1{
     list-style: none;
 }
 .post_comment ul li ul{
-    margin-left: 90px;
+    margin-left: 30px;
 }
 .post_comment li article{
     padding: 20px 0px;
@@ -3175,7 +3178,7 @@ header .main-menu .navbar-brand h1{
     background: transparent;
     color: #a3a8ab;
     font-size: 16px;
-    margin-top: 18px;
+    margin-top: 4px;
 }
 .sidebar-item .posts .post_item{
     overflow: hidden;

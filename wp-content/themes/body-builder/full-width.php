@@ -1,5 +1,6 @@
 <?php
 /**
+* Template Name: Full Width
  * The template for displaying all pages
  *
  * This is the template that displays all pages by default.
@@ -14,9 +15,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area container page_wrap">
-		<main id="main" class="site-main" role="main">
-
+	
 
 			<?php
 			while ( have_posts() ) : the_post();
@@ -30,9 +29,6 @@ get_header(); ?>
 
 			endwhile; // End of the loop.
 			?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
 
 <?php
 get_footer();

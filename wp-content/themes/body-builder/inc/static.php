@@ -39,7 +39,7 @@ add_action( 'wp_enqueue_scripts', 'body_builder_scripts', 90);
 
 
 //Google Map
-
+if (defined('FW')):
 if( ! function_exists( 'body_builder_gmap_init' ) ) :
      function body_builder_gmap_init() {
         $gmap_api = fw_get_db_settings_option('gmapapi');
@@ -58,3 +58,4 @@ endif;
 add_action( 'wp_enqueue_scripts', 'body_builder_gmap_init', 90 );
 
 
+endif;
